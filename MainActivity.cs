@@ -10,6 +10,7 @@ using OBDProject.Utils;
 using System;
 using System.Timers;
 
+
 namespace OBDProject
 {
     [Activity(Label = "OBDProject", MainLauncher = true, Icon = "@drawable/icon")]
@@ -51,13 +52,13 @@ namespace OBDProject
             _timer.Elapsed += _timer_Elapsed;
 
             _speedCommand = new VehicleSpeedCommand();
-            _speedCommand.Response += _ResponseFromCommand;
+            _speedCommand.Response += _command_Response;
 
             _throttleCommand = new ThrottlePositionCommand();
-            _throttleCommand.Response += _ResponseFromCommand;
+            _throttleCommand.Response += _command_Response;
 
             _engineCommand = new EngineRPMCommand();
-            _engineCommand.Response += _ResponseFromCommand;
+            _engineCommand.Response += _command_Response;
 
             _arrayAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1);
 
@@ -70,7 +71,7 @@ namespace OBDProject
             // SetContentView (Resource.Layout.Main);
         }
 
-        private void _ResponseFromCommand(object sender, string e)
+        private void _command_Response(object sender, string e)
         {
             _arrayAdapter.Add(e);
         }
@@ -80,14 +81,18 @@ namespace OBDProject
             _arrayAdapter.Clear();
         }
 
-        private void _timer_Elapsed(object sender, ElapsedEventArgs e)
+        private  void _timer_Elapsed(object sender, ElapsedEventArgs e)
         {
             try
             {
-                _speedCommand.ReadValue(_bluetoothManager.GetDataFromOdb(_speedCommand.Command));
-                _throttleCommand.ReadValue(_bluetoothManager.GetDataFromOdb(_throttleCommand.Command));
-                _engineCommand.ReadValue(_bluetoothManager.GetDataFromOdb(_engineCommand.Command));
-            }
+                RunOnUiThread(async () =>
+                {
+                    _speedCommand.ReadValue(await _bluetoothManager.GetDataFromOdb(_speedCommand.Command,"speed"));
+                    _throttleCommand.ReadValue(await _bluetoothManager.GetDataFromOdb(_throttleCommand.Command,"throttle"));
+                    _engineCommand.ReadValue(await _bluetoothManager.GetDataFromOdb(_engineCommand.Command,"engineRPM"));
+
+                });
+               }
             catch (Exception exception)
             {
                 Console.WriteLine(exception);
@@ -99,6 +104,11 @@ namespace OBDProject
             if (e)
             {
                 Toast.MakeText(Application.Context, string.Format("Połaczono z {0}", _address), ToastLength.Long).Show();
+                if (!_timer.Enabled)
+                {
+                    _timer.Start();
+                }
+
             }
             else
             {
@@ -142,7 +152,7 @@ namespace OBDProject
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
-            var address = data.Extras.GetString(DeviceListActivity.DeviceAddress);
+            _address = data.Extras.GetString(DeviceListActivity.DeviceAddress);
 
             switch (requestCode)
             {
@@ -150,8 +160,11 @@ namespace OBDProject
                     {
                         if (resultCode == Result.Ok)
                         {
-                            _bluetoothManager.Connect(address);
-                            _timer.Start();
+                            if (!string.IsNullOrEmpty(_address))
+                            {
+                                _bluetoothManager.Connect(_address);
+
+                            }
                         }
                         break;
                     }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Text;
 
 namespace OBDProject.Commands
@@ -11,11 +12,18 @@ namespace OBDProject.Commands
             // 0C	2	Engine RPM	0	16,383.75	rpm	{\displaystyle {\frac {256A+B}{4}}} {\displaystyle {\frac {256A+B}{4}}}
         }
 
-        public void ReadValue(string rowData)
+        public void ReadValue(List<int> data)
         {
-            double value = Convert.ToSingle(rowData);
-
-            OnResponse(string.Format("{0} RPM NOT SCALED!!!", value));
+            double value = 0;
+            try
+            {
+                value = (data[2] * 256f + data[3]) / 4;
+                OnResponse(string.Format("{0} RPM", value));
+            }
+            catch (Exception e)
+            {
+                OnResponse(string.Format("{0} RPM ", value));
+            }
         }
     }
 }

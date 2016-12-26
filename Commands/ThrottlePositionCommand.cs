@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Text;
 
 namespace OBDProject.Commands
@@ -11,13 +12,20 @@ namespace OBDProject.Commands
             //11	1	Throttle position	0	100	 %	(100/255)*A
         }
 
-        public void ReadValue(string rowData)
+        public void ReadValue(List<int> data)
         {
-            double value = Convert.ToSingle(rowData);
+            double value=0;
+            try
+            {
 
-            value = ((double)100 * value) / (double)255;
+                value = ((double)100 * data[2]) / (double)255;
+                OnResponse(string.Format("{0} %", value));
+            }
+            catch (Exception e)
+            {
+                OnResponse(string.Format("Error {0} %", value));
+            }
 
-            OnResponse(string.Format("{0} %", value));
         }
     }
 }
