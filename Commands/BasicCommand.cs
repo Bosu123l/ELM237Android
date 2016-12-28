@@ -22,7 +22,7 @@ namespace OBDProject.Commands
         protected readonly Regex BusinitPattern = new Regex(@"(BUS INIT) | (BUSINIT) | (\\.)");
         protected readonly Regex SearchingPattern = new Regex(@"SEARCHING");
         protected readonly Regex DigitsLettersPattern = new Regex(@"([0-9A-F])+");
-        protected readonly Regex UnableToConnect = new Regex(@"(UNABLETOCONNECT) | (UNABLE TO CONNECT");
+        protected readonly Regex UnableToConnect = new Regex(@"(UNABLETOCONNECT) | (UNABLE TO CONNECT)");
 
         protected List<int> readedData;
         protected string Unit;

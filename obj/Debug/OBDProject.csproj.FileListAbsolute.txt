@@ -79,5 +79,6 @@ C:\Users\Łukasz\Source\Repos\ELM237Android\obj\Debug\android\assets\System.Runt
 C:\Users\Łukasz\Source\Repos\ELM237Android\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
 C:\Users\Łukasz\Source\Repos\ELM237Android\obj\Debug\android\assets\System.Xml.dll.mdb
 C:\Users\Łukasz\Source\Repos\ELM237Android\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
+C:\Users\Łukasz\Source\Repos\ELM237Android\obj\Debug\res\drawable\auto.png
 C:\Users\Łukasz\Source\Repos\ELM237Android\obj\Debug\OBDProject.dll.mdb
 C:\Users\Łukasz\Source\Repos\ELM237Android\bin\Debug\OBDProject.dll.mdb

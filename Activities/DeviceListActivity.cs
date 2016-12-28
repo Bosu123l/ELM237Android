@@ -4,11 +4,8 @@ using Android.Content;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
-using Java.Util;
 using OBDProject.Utils;
 using System;
-using System.Text;
-using Android.Util;
 
 namespace OBDProject.Activities
 {
@@ -22,13 +19,15 @@ namespace OBDProject.Activities
         public static ArrayAdapter<string> PairedDevicesArrayAdapter;
         public static ArrayAdapter<string> NewDevicesArrayAdapter;
 
-       
         private Receiver _receiver;
 
         private BluetoothAdapter _bluetoothAdapter;
         private Button _findButton;
+        private bool _connecting;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            _connecting = false;
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.device_list);
@@ -80,31 +79,34 @@ namespace OBDProject.Activities
 
         private void NewDevices_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            Title = "Próba Po³aczenia...";
+            Intent intent = new Intent();
+
+            var address = string.Empty;
+
+            // Simulate some work here in order for the progress spinner to update
+
             _bluetoothAdapter.CancelDiscovery();
 
             // Get the device MAC address, which is the last 17 chars in the View
             var info = (e.View as TextView).Text.ToString();
-            var address = info.Substring(info.Length - 17);
+            address = info.Substring(info.Length - 17);
 
-           
             //byte[] cmd = Encoding.ASCII.GetBytes("01 0D");
             //_socket.OutputStream.Write(cmd, 0, cmd.Length);
             //ReadAnswer();
             //_socket.OutputStream.Flush();
-            Intent intent = new Intent();
 
-            intent.PutExtra(DeviceAddress, address);
-
-       
-
-         //   intent.PutExtra(ConnectedStatus, _socket.IsConnected );
+            //   intent.PutExtra(ConnectedStatus, _socket.IsConnected );
 
             // Set result and finish this Activity
+
+            //eTxt[i].Text = slnArray[i].ToString();
+
+            intent.PutExtra(DeviceAddress, address);
             SetResult(Result.Ok, intent);
+
             Finish();
         }
-        string rawData;
 
         private void _findButton_Click(object sender, EventArgs e)
         {
@@ -122,6 +124,7 @@ namespace OBDProject.Activities
 
             // Unregister broadcast listeners
             UnregisterReceiver(_receiver);
+
             base.OnDestroy();
         }
 

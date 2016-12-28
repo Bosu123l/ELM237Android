@@ -4,7 +4,7 @@ using System;
 
 namespace OBDProject.Utils
 {
-    public class BluetoothManager
+    public class BluetoothManager : IDisposable
     {
         public const string Uuid = "00001101-0000-1000-8000-00805F9B34FB";
 
@@ -14,31 +14,30 @@ namespace OBDProject.Utils
             {
                 return _socket;
             }
+            private set { _socket = value; }
         }
 
         public event EventHandler<bool> Connected;
 
         private BluetoothAdapter _bluetoothAdapter;
-
-        private BluetoothAdapter _myAdapter;
         private BluetoothSocket _socket;
-
+    
         public BluetoothManager()
         {
         }
 
         public void Connect(string address)
         {
-            _myAdapter = BluetoothAdapter.DefaultAdapter;
-            if (_myAdapter == null)
+            _bluetoothAdapter = BluetoothAdapter.DefaultAdapter;
+            if (_bluetoothAdapter == null)
             {
                 //Device has no Bluetooth
             }
-            if (_myAdapter != null && !_myAdapter.IsEnabled)
+            if (_bluetoothAdapter != null && !_bluetoothAdapter.IsEnabled)
             {
-                _myAdapter.Enable();
+                _bluetoothAdapter.Enable();
             }
-            BluetoothDevice d = _myAdapter.GetRemoteDevice(address);
+            BluetoothDevice d = _bluetoothAdapter.GetRemoteDevice(address);
 
             _socket = d.CreateRfcommSocketToServiceRecord(UUID.FromString(Uuid));
             try
@@ -57,6 +56,13 @@ namespace OBDProject.Utils
             var tempHandler = Connected;
             tempHandler?.Invoke(this, connected);
         }
+
+        public void Dispose()
+        {
+            _bluetoothAdapter?.Dispose();
+            _socket?.Dispose();
+        }
+
 
         //private void writeToOBD(byte[] command)
         //{

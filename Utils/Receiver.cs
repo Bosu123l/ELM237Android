@@ -32,8 +32,7 @@ namespace OBDProject.Utils
             }
             else if (action == BluetoothAdapter.ActionDiscoveryFinished)
             {
-                _chat.SetProgressBarIndeterminateVisibility(false);
-                _chat.SetTitle(Resource.String.select_device);
+                 _chat.SetTitle(Resource.String.select_device);
                 if (DeviceListActivity.NewDevicesArrayAdapter.Count == 0)
                 {
                     var noDevices = _chat.Resources.GetText(Resource.String.none_found).ToString();

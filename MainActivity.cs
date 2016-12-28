@@ -8,11 +8,14 @@ using OBDProject.Activities;
 using OBDProject.Commands;
 using OBDProject.Utils;
 using System;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Timers;
+using Timer = System.Timers.Timer;
 
 namespace OBDProject
 {
-    [Activity(Label = "OBDProject", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Android OBDII", MainLauncher = true, Icon = "@drawable/Auto")]
     public class MainActivity : Activity
     {
         public const double INTERVAL = 500;
@@ -38,6 +41,9 @@ namespace OBDProject
         private ThrottlePositionCommand _throttleCommand;
         private EngineRPMCommand _engineCommand;
 
+
+        private bool _connecting;
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -59,11 +65,18 @@ namespace OBDProject
             _listView.Adapter = _arrayAdapter;
 
             _clearButton.Click += _clearButton_Click;
+          
+        }
+
+        protected override void OnDestroy()
+        {
+            _bluetoothManager.Dispose();
+            base.OnDestroy();
         }
 
         private void _command_Response(object sender, string e)
         {
-            Log.Info("Przetworzone!", e);
+            Log.Info("++++PRZETWORZONE!+++++", e);
             _arrayAdapter.Add(e);
         }
 
@@ -89,6 +102,12 @@ namespace OBDProject
             }
         }
 
+        protected override void OnResume()
+        {
+            
+            base.OnResume();
+        }
+
         private void _bluetoothManager_Connected(object sender, bool e)
         {
             if (e)
@@ -111,6 +130,7 @@ namespace OBDProject
                 }
             }
             _previouseConnectionState = e;
+           
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -141,6 +161,7 @@ namespace OBDProject
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
+            _connecting = false;
             if (resultCode == Result.Ok)
             {
                 switch (requestCode)
@@ -148,7 +169,10 @@ namespace OBDProject
                     case REQUEST_CONNECT_DEVICE:
                         {
                             _address = data.Extras.GetString(DeviceListActivity.DeviceAddress);
+
+
                             _bluetoothManager.Connect(_address);
+
 
                             _speedCommand = new VehicleSpeedCommand(_bluetoothManager.Socket, _readFromDeviceLock);
                             _speedCommand.Response -= _command_Response;
