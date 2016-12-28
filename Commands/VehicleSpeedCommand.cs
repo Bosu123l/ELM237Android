@@ -1,20 +1,24 @@
-using System.Collections.Generic;
-using OBDProject.Commands;
+using System.Linq;
+using Android.Bluetooth;
 using System.Text;
 
-namespace OBDProject.Resources
+namespace OBDProject.Commands
 {
     public class VehicleSpeedCommand : BasicCommand
     {
-        public VehicleSpeedCommand() : base(Encoding.ASCII.GetBytes("01 0D\r"))
+        public VehicleSpeedCommand(BluetoothSocket socket, object readFromDeviceLock) : base(Encoding.ASCII.GetBytes("01 0D\r"), socket, "km/h", readFromDeviceLock)
         {
             //01	Show current data
             //0D	1	Vehicle speed	0	255	km/h    A
         }
 
-        public void ReadValue(List<int> data)
+        protected override void PrepereFindResult()
         {
-            OnResponse(string.Format("{0} km/H", data[2]));
+            if (base.readedData.Any())
+            {
+                OnResponse(string.Format("{0} {1}", base.readedData[2], Unit));
+            }
+
         }
     }
 }

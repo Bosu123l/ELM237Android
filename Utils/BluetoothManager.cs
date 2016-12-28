@@ -1,17 +1,20 @@
 using Android.Bluetooth;
-using Android.Util;
 using Java.Util;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace OBDProject.Utils
 {
     public class BluetoothManager
     {
         public const string Uuid = "00001101-0000-1000-8000-00805F9B34FB";
+
+        public BluetoothSocket Socket
+        {
+            get
+            {
+                return _socket;
+            }
+        }
 
         public event EventHandler<bool> Connected;
 
@@ -31,7 +34,7 @@ namespace OBDProject.Utils
             {
                 //Device has no Bluetooth
             }
-            if (!_myAdapter.IsEnabled)
+            if (_myAdapter != null && !_myAdapter.IsEnabled)
             {
                 _myAdapter.Enable();
             }
@@ -52,97 +55,114 @@ namespace OBDProject.Utils
         protected void OnConnected(bool connected)
         {
             var tempHandler = Connected;
-            if (tempHandler != null)
-            {
-                tempHandler(this, connected);
-            }
+            tempHandler?.Invoke(this, connected);
         }
 
-        private void writeToOBD(byte[] command)
-        {
-            _socket.OutputStream.Write(command, 0, command.Length);
-            _socket.OutputStream.Flush();
-        }
+        //private void writeToOBD(byte[] command)
+        //{
+        //    _socket.OutputStream.Write(command, 0, command.Length);
+        //    _socket.OutputStream.Flush();
+        //}
 
-        public async Task<List<int>> GetDataFromOdb(byte[] command, string source)
-        {
-            writeToOBD(command);
-            return await Task.Run(() =>
-            {
-                try
-                {
-                    var buffer = new List<int>();
-                    var rawData = string.Empty;
-                    int a = 0;
-                    List<byte> oryginalMessage = new List<byte>();
-                    System.Text.StringBuilder builder = new System.Text.StringBuilder();
-                    char c;
-                    while (((a = (byte)_socket.InputStream.ReadByte()) > -1))
-                    {
-                        c = (char)a;
+        //public async Task<List<int>> GetDataFromOdb(byte[] command, string source)
+        //{
+        //    writeToOBD(command);
+        //    return await Task.Run(() =>
+        //    {
+        //        try
+        //        {
+        //            var buffer = new List<int>();
+        //            var rawData = string.Empty;
+        //            int a = 0;
+        //            List<byte> oryginalMessage = new List<byte>();
+        //            System.Text.StringBuilder builder = new System.Text.StringBuilder();
+        //            char c;
+        //            while (((a = (byte)_socket.InputStream.ReadByte()) > -1))
+        //            {
+        //                c = (char)a;
 
-                        if (c == '>')
-                        {
-                            break;
-                        }
-                        builder.Append(c);
-                    }
+        //                if (c == '>')
+        //                {
+        //                    break;
+        //                }
+        //                builder.Append(c);
+        //            }
 
-                    rawData = builder.ToString();
+        //            rawData = builder.ToString();
 
-                    buffer = formatMessage(rawData, source);
+        //            buffer = formatMessage(rawData, source);
 
-                    if (!buffer.Any())
-                    {
-                        throw new Exception("EMPTY");
-                    }
+        //            if (!buffer.Any())
+        //            {
+        //                throw new Exception("EMPTY");
+        //            }
 
-                    Log.Info(source, "List of Numbers" + string.Join(";", buffer));
-                    Log.Info(source, "oryginal message: " + rawData);
-                    return buffer;
-                }
-                catch (Exception e)
-                {
-                    Log.Info("", "" + e.Message);
-                    return new List<int>();
-                }
-                finally
-                {
-                    _socket.InputStream.Flush();
-                }
-            });
-        }
+        //            Log.Info(source, "List of Numbers" + string.Join(",", buffer.Select(x => x.ToString())));
+        //            Log.Info(source, "oryginal message: " + rawData);
+        //            return buffer;
+        //        }
+        //        catch (Exception e)
+        //        {
+        //            Log.Info("", "" + e.Message);
+        //            return new List<int>();
+        //        }
+        //        finally
+        //        {
+        //            _socket.InputStream.Flush();
+        //        }
+        //    });
+        //}
 
-        private List<int> formatMessage(string rawData, string source)
-        {
-            var buffer = new List<int>();
-            Regex digitsLettersPattern = new Regex("([0-9A-F])+", RegexOptions.IgnoreCase);
-            string message = string.Empty;
+        //private List<int> formatMessage(string rawData, string source)
+        //{
+        //    var buffer = new List<int>();
+        //    Regex digitsLettersPattern = new Regex("([0-9A-F])+", RegexOptions.IgnoreCase);
+        //    string message = string.Empty;
 
-            Regex white = new Regex(@"\s+");
-            Regex dot = new Regex(@"\.");
+        //    Regex white = new Regex(@"\s+");
+        //    Regex dot = new Regex(@"\.");
 
-            message = white.Replace(rawData, "");
-            message = dot.Replace(message, "");
+        //    message = white.Replace(rawData, "");
+        //    message = dot.Replace(message, "");
 
-            Match match = digitsLettersPattern.Match(message);
+        //    Match match = digitsLettersPattern.Match(message);
 
-            if (match.Success)
-            {
-                return buffer;
-            }
-            Log.Info(source, "cleared message: " + message);
-            // read string each two chars
-            buffer.Clear();
-            int begin = 0;
-            int end = 2;
-            while (end <= message.Length)
-            {
-                buffer.Add(Convert.ToInt32(message.Substring(begin, end), 16));
-                begin = end;
-                end += 2;
-            }
-            return buffer;
-        }
+        //    //if (match.Success)
+        //    //{
+        //    //    return buffer;
+        //    //}
+        //    Log.Info(source, "cleared message: " + message);
+        //    // read string each two chars
+        //    buffer.Clear();
+
+        //    try
+        //    {
+        //        message = StringToHex(message);
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        Log.Info(source, "Error while convert to hex string");
+        //    }
+
+        //    int begin = 0;
+        //    int end = 2;
+        //    while (end <= message.Length)
+        //    {
+        //        buffer.Add(Convert.ToInt32(message.Substring(begin, 2), 16));
+        //        begin = end;
+        //        end += 2;
+        //    }
+        //    return buffer;
+        //}
+
+        //private string StringToHex(string message)
+        //{
+        //    StringBuilder sb = new StringBuilder();
+        //    foreach (var text in message)
+        //    {
+        //        sb.Append(Convert.ToInt32(text).ToString("x") + " ");
+        //    }
+        //    return sb.ToString();
+        //}
     }
 }

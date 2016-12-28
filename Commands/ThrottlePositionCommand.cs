@@ -1,31 +1,24 @@
-using System;
-using System.Collections.Generic;
+using System.Linq;
+using Android.Bluetooth;
 using System.Text;
 
 namespace OBDProject.Commands
 {
     public class ThrottlePositionCommand : BasicCommand
     {
-        public ThrottlePositionCommand() : base(Encoding.ASCII.GetBytes("01 11\r"))
+        public ThrottlePositionCommand(BluetoothSocket socket, object readFromDeviceLock) : base(Encoding.ASCII.GetBytes("01 11\r"), socket, "%", readFromDeviceLock)
         {
             //01	Show current data
             //11	1	Throttle position	0	100	 %	(100/255)*A
         }
 
-        public void ReadValue(List<int> data)
+        protected override void PrepereFindResult()
         {
-            double value=0;
-            try
+            if (base.readedData.Any())
             {
-
-                value = ((double)100 * data[2]) / (double)255;
-                OnResponse(string.Format("{0} %", value));
+                var value = (100f * base.readedData[2]) / 255f;
+                OnResponse(string.Format("{0} {1}", value, base.Unit));
             }
-            catch (Exception e)
-            {
-                OnResponse(string.Format("Error {0} %", value));
-            }
-
         }
     }
 }
