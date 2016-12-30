@@ -179,7 +179,6 @@ namespace OBDProject
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
-            _connecting = false;
             if (resultCode == Result.Ok)
             {
                 switch (requestCode)
