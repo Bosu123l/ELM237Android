@@ -26,7 +26,7 @@ namespace OBDProject.Commands
 
         protected List<int> readedData;
         protected string Unit;
-
+        protected string Source;
         private readonly BluetoothSocket _socket;
         private readonly byte[] _command;
 
@@ -96,7 +96,7 @@ namespace OBDProject.Commands
             });
         }
 
-        private string ReadRawData()
+        protected virtual string ReadRawData()
         {
             System.Text.StringBuilder builder = new System.Text.StringBuilder();
             char c;
@@ -153,7 +153,7 @@ namespace OBDProject.Commands
             return temp;
         }
 
-        private List<int> FillBuffer(string data)
+        protected virtual List<int> FillBuffer(string data)
         {
             var buffer = new List<int>();
 

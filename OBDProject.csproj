@@ -53,7 +53,13 @@
   <ItemGroup>
     <Compile Include="Activities\DeviceListActivity.cs" />
     <Compile Include="Commands\BasicCommand.cs" />
+    <Compile Include="Commands\Fuel\ConsuptionFuelRateCommand.cs" />
+    <Compile Include="Commands\Fuel\FuelPressureCommand.cs" />
+    <Compile Include="Commands\Temperature\EngineCoolantTemperatureCommand.cs" />
+    <Compile Include="Commands\Temperature\EngineOilTemperatureCommand.cs" />
     <Compile Include="Commands\EngineRPMCommand.cs" />
+    <Compile Include="Commands\Fuel\FuelLevelCommand.cs" />
+    <Compile Include="Commands\Fuel\FuelTypeCommand.cs" />
     <Compile Include="Commands\ThrottlePositionCommand.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -61,6 +67,7 @@
     <Compile Include="Commands\VehicleSpeedCommand.cs" />
     <Compile Include="Utils\BluetoothManager.cs" />
     <Compile Include="Utils\DeviceListActivityResultEnum.cs" />
+    <Compile Include="Utils\FuelType.cs" />
     <Compile Include="Utils\Receiver.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +98,9 @@
     <AndroidResource Include="Resources\drawable\Auto.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Commands\CarStatus\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
