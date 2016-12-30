@@ -6,10 +6,11 @@ using Android.Views;
 using Android.Widget;
 using OBDProject.Activities;
 using OBDProject.Commands;
+using OBDProject.Commands.Fuel;
+using OBDProject.Commands.Temperature;
 using OBDProject.Utils;
 using System;
-using System.Threading;
-using System.Threading.Tasks;
+using System.Collections.Generic;
 using System.Timers;
 using Timer = System.Timers.Timer;
 
@@ -37,12 +38,11 @@ namespace OBDProject
         private ArrayAdapter _arrayAdapter;
         private Button _clearButton;
 
-        private VehicleSpeedCommand _speedCommand;
-        private ThrottlePositionCommand _throttleCommand;
-        private EngineRPMCommand _engineCommand;
+        #region Commands
 
+        private List<BasicCommand> _basicCommands;
 
-        private bool _connecting;
+        #endregion Commands
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -65,11 +65,14 @@ namespace OBDProject
             _listView.Adapter = _arrayAdapter;
 
             _clearButton.Click += _clearButton_Click;
-          
+
+            _basicCommands = new List<BasicCommand>();
         }
 
         protected override void OnDestroy()
         {
+            ClearCommandCollection();
+
             _bluetoothManager.Dispose();
             base.OnDestroy();
         }
@@ -91,9 +94,10 @@ namespace OBDProject
             {
                 RunOnUiThread(async () =>
                 {
-                    await _speedCommand.ReadResult();
-                    await _throttleCommand.ReadResult();
-                    await _engineCommand.ReadResult();
+                    foreach (var basicCommand in _basicCommands)
+                    {
+                        await basicCommand.ReadResult();
+                    }
                 });
             }
             catch (Exception exception)
@@ -104,7 +108,6 @@ namespace OBDProject
 
         protected override void OnResume()
         {
-            
             base.OnResume();
         }
 
@@ -130,7 +133,6 @@ namespace OBDProject
                 }
             }
             _previouseConnectionState = e;
-           
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -159,6 +161,22 @@ namespace OBDProject
             }
         }
 
+        private void ClearCommandCollection()
+        {
+            try
+            {
+                foreach (var basicCommand in _basicCommands)
+                {
+                    basicCommand.Response -= _command_Response;
+                }
+                _basicCommands.Clear();
+            }
+            catch (Exception ex)
+            {
+                Log.Error("Cleaning Command Colection ERROR!", ex.Message);
+            }
+        }
+
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
             _connecting = false;
@@ -170,21 +188,24 @@ namespace OBDProject
                         {
                             _address = data.Extras.GetString(DeviceListActivity.DeviceAddress);
 
-
                             _bluetoothManager.Connect(_address);
 
+                            ClearCommandCollection();
 
-                            _speedCommand = new VehicleSpeedCommand(_bluetoothManager.Socket, _readFromDeviceLock);
-                            _speedCommand.Response -= _command_Response;
-                            _speedCommand.Response += _command_Response;
+                            _basicCommands.Add(new VehicleSpeedCommand(_bluetoothManager.Socket, _readFromDeviceLock));
+                            _basicCommands.Add(new ThrottlePositionCommand(_bluetoothManager.Socket, _readFromDeviceLock));
+                            _basicCommands.Add(new EngineRPMCommand(_bluetoothManager.Socket, _readFromDeviceLock));
+                            _basicCommands.Add(new ConsuptionFuelRateCommand(_bluetoothManager.Socket, _readFromDeviceLock));
+                            _basicCommands.Add(new FuelLevelCommand(_bluetoothManager.Socket, _readFromDeviceLock));
+                            _basicCommands.Add(new FuelPressureCommand(_bluetoothManager.Socket, _readFromDeviceLock));
+                            _basicCommands.Add(new FuelTypeCommand(_bluetoothManager.Socket, _readFromDeviceLock));
+                            _basicCommands.Add(new EngineOilTemperatureCommand(_bluetoothManager.Socket, _readFromDeviceLock));
+                            _basicCommands.Add(new EngineCoolantTemperatureCommand(_bluetoothManager.Socket, _readFromDeviceLock));
 
-                            _throttleCommand = new ThrottlePositionCommand(_bluetoothManager.Socket, _readFromDeviceLock);
-                            _throttleCommand.Response -= _command_Response;
-                            _throttleCommand.Response += _command_Response;
-
-                            _engineCommand = new EngineRPMCommand(_bluetoothManager.Socket, _readFromDeviceLock);
-                            _engineCommand.Response -= _command_Response;
-                            _engineCommand.Response += _command_Response;
+                            foreach (var basicCommand in _basicCommands)
+                            {
+                                basicCommand.Response += _command_Response;
+                            }
 
                             break;
                         }

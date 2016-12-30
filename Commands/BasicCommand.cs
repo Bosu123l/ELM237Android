@@ -24,14 +24,14 @@ namespace OBDProject.Commands
         protected readonly Regex DigitsLettersPattern = new Regex(@"([0-9A-F])+");
         protected readonly Regex UnableToConnect = new Regex(@"(UNABLETOCONNECT) | (UNABLE TO CONNECT)");
 
-        protected List<int> readedData;
+        protected List<int> ReadedData;
         protected string Unit;
-
+        protected string Source;
         private readonly BluetoothSocket _socket;
         private readonly byte[] _command;
 
         public event EventHandler<string> Response;
-
+      
         protected BasicCommand(byte[] command, BluetoothSocket socket, string unit, object readFromDeviceLock)
         {
             if (command == null)
@@ -40,7 +40,7 @@ namespace OBDProject.Commands
             }
             if (socket == null)
             {
-                throw new ArgumentNullException("_socket Cannot be null!");
+                throw new ArgumentNullException("Socket Cannot be null!");
             }
             if (string.IsNullOrEmpty(unit))
             {
@@ -85,7 +85,7 @@ namespace OBDProject.Commands
                     try
                     {
                         SendCommand();
-                        readedData = FillBuffer(CheckForErrors(ReadRawData()));
+                        ReadedData = FillBuffer(CheckForErrors(ReadRawData()));
                         PrepereFindResult();
                     }
                     catch (Exception ex)
@@ -96,7 +96,7 @@ namespace OBDProject.Commands
             });
         }
 
-        private string ReadRawData()
+        protected virtual string ReadRawData()
         {
             System.Text.StringBuilder builder = new System.Text.StringBuilder();
             char c;
@@ -153,7 +153,7 @@ namespace OBDProject.Commands
             return temp;
         }
 
-        private List<int> FillBuffer(string data)
+        protected virtual List<int> FillBuffer(string data)
         {
             var buffer = new List<int>();
 

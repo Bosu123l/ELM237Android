@@ -1,5 +1,5 @@
-using System.Linq;
 using Android.Bluetooth;
+using System.Linq;
 using System.Text;
 
 namespace OBDProject.Commands
@@ -10,14 +10,15 @@ namespace OBDProject.Commands
         {
             //01	Show current data
             //11	1	Throttle position	0	100	 %	(100/255)*A
+            Source = "ThrottlePositionCommand";
         }
 
         protected override void PrepereFindResult()
         {
-            if (base.readedData.Any())
+            if (base.ReadedData.Any())
             {
-                var value = (100f * base.readedData[2]) / 255f;
-                OnResponse(string.Format("{0} {1}", value, base.Unit));
+                var value = (100f * base.ReadedData[2]) / 255f;
+                OnResponse(string.Format("{0} {1} {3}", Source, value, base.Unit));
             }
         }
     }
