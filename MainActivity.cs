@@ -80,7 +80,10 @@ namespace OBDProject
         private void _command_Response(object sender, string e)
         {
             Log.Info("++++PRZETWORZONE!+++++", e);
-            _arrayAdapter.Add(e);
+            RunOnUiThread(() =>
+            {
+                _arrayAdapter.Add(e);
+            });
         }
 
         private void _clearButton_Click(object sender, System.EventArgs e)
