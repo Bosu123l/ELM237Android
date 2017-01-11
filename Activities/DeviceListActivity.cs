@@ -12,6 +12,7 @@ namespace OBDProject.Activities
     [Activity(Label = "DeviceListActivity")]
     public class DeviceListActivity : Activity
     {
+        public const string ActivityReturned = "DeviceListActivity";
         private const string TAG = "DeviceListActivity";
         public const string ConnectedStatus = "deviceConnectionStatus";
         public const string DeviceAddress = "deviceAddress";
@@ -75,6 +76,7 @@ namespace OBDProject.Activities
             newDevicesListView.ItemClick += NewDevices_ItemClick;
             pairedListView.ItemClick += NewDevices_ItemClick;
             _findButton.Click += _findButton_Click;
+
         }
 
         private void NewDevices_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
@@ -101,8 +103,8 @@ namespace OBDProject.Activities
             // Set result and finish this Activity
 
             //eTxt[i].Text = slnArray[i].ToString();
-
-            intent.PutExtra(DeviceAddress, address);
+            intent.PutExtra(ActivityResults.ActivityClosed, ActivityReturned);
+            intent.PutExtra(ActivityResults.AddressOfSelectedDevice, address);
             SetResult(Result.Ok, intent);
 
             Finish();

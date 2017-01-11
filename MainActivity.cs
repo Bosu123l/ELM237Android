@@ -11,6 +11,7 @@ using OBDProject.Commands.Temperature;
 using OBDProject.Utils;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Timers;
 using Timer = System.Timers.Timer;
 
@@ -37,6 +38,8 @@ namespace OBDProject
 
         private ArrayAdapter _arrayAdapter;
         private Button _clearButton;
+
+        private List<int> _indexesOfSelecedElements;
 
         #region Commands
 
@@ -149,9 +152,15 @@ namespace OBDProject
         {
             switch (item.ItemId)
             {
+                case Resource.Id.selectCommand:
+                    var selectDataIntent = new Intent(this, typeof(SelectDataToReadActivity));
+                    StartActivityForResult(selectDataIntent, 1);
+
+                    return true;
+
                 case Resource.Id.scan:
-                    var serverIntent = new Intent(this, typeof(DeviceListActivity));
-                    StartActivityForResult(serverIntent, 1);
+                    var deviceListIntent = new Intent(this, typeof(DeviceListActivity));
+                    StartActivityForResult(deviceListIntent, 1);
 
                     return true;
 
@@ -182,27 +191,34 @@ namespace OBDProject
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
+            var resultFromActivity = data == null ? string.Empty : data.GetStringExtra(ActivityResults.ActivityClosed);
+
             if (resultCode == Result.Ok)
             {
-                switch (requestCode)
+                switch (resultFromActivity)
                 {
-                    case REQUEST_CONNECT_DEVICE:
+                    case DeviceListActivity.ActivityReturned:
                         {
-                            _address = data.Extras.GetString(DeviceListActivity.DeviceAddress);
+                            if (_indexesOfSelecedElements == null)
+                            {
+                                ShowAlert("Elements to display is not selected!");
+                                return;
+                            }
+                            _address = data.Extras.GetString(ActivityResults.AddressOfSelectedDevice);
 
                             _bluetoothManager.Connect(_address);
 
                             ClearCommandCollection();
-
-                            _basicCommands.Add(new VehicleSpeedCommand(_bluetoothManager.Socket, _readFromDeviceLock));
-                            _basicCommands.Add(new ThrottlePositionCommand(_bluetoothManager.Socket, _readFromDeviceLock));
-                            _basicCommands.Add(new EngineRPMCommand(_bluetoothManager.Socket, _readFromDeviceLock));
-                            _basicCommands.Add(new ConsuptionFuelRateCommand(_bluetoothManager.Socket, _readFromDeviceLock));
-                            _basicCommands.Add(new FuelLevelCommand(_bluetoothManager.Socket, _readFromDeviceLock));
-                            _basicCommands.Add(new FuelPressureCommand(_bluetoothManager.Socket, _readFromDeviceLock));
-                            _basicCommands.Add(new FuelTypeCommand(_bluetoothManager.Socket, _readFromDeviceLock));
-                            _basicCommands.Add(new EngineOilTemperatureCommand(_bluetoothManager.Socket, _readFromDeviceLock));
-                            _basicCommands.Add(new EngineCoolantTemperatureCommand(_bluetoothManager.Socket, _readFromDeviceLock));
+                            //"Vehicle Speed",
+                            //Throttle Position
+                            // "Engine RPM",
+                            // "Consuption Fuel Rate",
+                            // "Fuel Level",
+                            // "Fuel Pressure",
+                            // "Fuel Type",
+                            // "Engine Oil Temperature",
+                            // "Engine Coolant Temperature"
+                            AddSelectedElements();
 
                             foreach (var basicCommand in _basicCommands)
                             {
@@ -211,10 +227,72 @@ namespace OBDProject
 
                             break;
                         }
+                    case SelectDataToReadActivity.ActivityReturned:
+                        {
+                            var selectedElements = data.GetIntArrayExtra(ActivityResults.SelectedData);
+                            _indexesOfSelecedElements = selectedElements.ToList();
+                        }
+                        break;
                 }
             }
 
             base.OnActivityResult(requestCode, resultCode, data);
+        }
+
+        private void AddSelectedElements()
+        {
+            if (_indexesOfSelecedElements.Contains(0))
+            {
+                _basicCommands.Add(new VehicleSpeedCommand(_bluetoothManager.Socket, _readFromDeviceLock));
+            }
+            if (_indexesOfSelecedElements.Contains(1))
+            {
+                _basicCommands.Add(new ThrottlePositionCommand(_bluetoothManager.Socket, _readFromDeviceLock));
+            }
+            if (_indexesOfSelecedElements.Contains(2))
+            {
+                _basicCommands.Add(new EngineRPMCommand(_bluetoothManager.Socket, _readFromDeviceLock));
+            }
+            if (_indexesOfSelecedElements.Contains(3))
+            {
+                _basicCommands.Add(new ConsuptionFuelRateCommand(_bluetoothManager.Socket, _readFromDeviceLock));
+            }
+            if (_indexesOfSelecedElements.Contains(4))
+            {
+                _basicCommands.Add(new FuelLevelCommand(_bluetoothManager.Socket, _readFromDeviceLock));
+            }
+            if (_indexesOfSelecedElements.Contains(5))
+            {
+                _basicCommands.Add(new FuelPressureCommand(_bluetoothManager.Socket, _readFromDeviceLock));
+            }
+            if (_indexesOfSelecedElements.Contains(6))
+            {
+                _basicCommands.Add(new FuelTypeCommand(_bluetoothManager.Socket, _readFromDeviceLock));
+            }
+            if (_indexesOfSelecedElements.Contains(7))
+            {
+                _basicCommands.Add(new EngineOilTemperatureCommand(_bluetoothManager.Socket, _readFromDeviceLock));
+            }
+            if (_indexesOfSelecedElements.Contains(8))
+            {
+                _basicCommands.Add(new EngineCoolantTemperatureCommand(_bluetoothManager.Socket, _readFromDeviceLock));
+            }
+        }
+
+        public void ShowAlert(string str)
+        {
+            AlertDialog.Builder alert = new AlertDialog.Builder(this);
+            alert.SetTitle(str);
+            alert.SetPositiveButton("OK", (senderAlert, args) =>
+            {
+                // write your own set of instructions
+            });
+
+            //run the alert in UI thread to display in the screen
+            RunOnUiThread(() =>
+            {
+                alert.Show();
+            });
         }
     }
 }

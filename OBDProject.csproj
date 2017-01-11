@@ -66,6 +66,7 @@
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Commands\VehicleSpeedCommand.cs" />
+    <Compile Include="Utils\ActivityResults.cs" />
     <Compile Include="Utils\BluetoothManager.cs" />
     <Compile Include="Utils\DeviceListActivityResultEnum.cs" />
     <Compile Include="Utils\FuelType.cs" />
@@ -78,6 +79,9 @@
     <AndroidResource Include="Resources\layout\device_list.axml" />
     <AndroidResource Include="Resources\layout\device_name.axml" />
     <AndroidResource Include="Resources\layout\SelectDataToReadView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\WrapPanel.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

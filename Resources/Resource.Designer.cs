@@ -66,6 +66,9 @@ namespace OBDProject
 			// aapt resource value: 0x7f060005
 			public const int ClearButton = 2131099653;
 			
+			// aapt resource value: 0x7f060008
+			public const int ConfirmButton = 2131099656;
+			
 			// aapt resource value: 0x7f060006
 			public const int ElementyODB = 2131099654;
 			
@@ -75,8 +78,8 @@ namespace OBDProject
 			// aapt resource value: 0x7f060004
 			public const int button_scan = 2131099652;
 			
-			// aapt resource value: 0x7f060009
-			public const int discoverable = 2131099657;
+			// aapt resource value: 0x7f06000b
+			public const int discoverable = 2131099659;
 			
 			// aapt resource value: 0x7f060003
 			public const int new_devices = 2131099651;
@@ -84,8 +87,11 @@ namespace OBDProject
 			// aapt resource value: 0x7f060001
 			public const int paired_devices = 2131099649;
 			
-			// aapt resource value: 0x7f060008
-			public const int scan = 2131099656;
+			// aapt resource value: 0x7f060009
+			public const int scan = 2131099657;
+			
+			// aapt resource value: 0x7f06000a
+			public const int selectCommand = 2131099658;
 			
 			// aapt resource value: 0x7f060002
 			public const int title_new_devices = 2131099650;
@@ -117,6 +123,9 @@ namespace OBDProject
 			
 			// aapt resource value: 0x7f030003
 			public const int SelectDataToReadView = 2130903043;
+			
+			// aapt resource value: 0x7f030004
+			public const int WrapPanel = 2130903044;
 			
 			static Layout()
 			{
@@ -165,8 +174,11 @@ namespace OBDProject
 			// aapt resource value: 0x7f040010
 			public const int connect = 2130968592;
 			
+			// aapt resource value: 0x7f040012
+			public const int discoverable = 2130968594;
+			
 			// aapt resource value: 0x7f040011
-			public const int discoverable = 2130968593;
+			public const int enableCommands = 2130968593;
 			
 			// aapt resource value: 0x7f04000c
 			public const int none_found = 2130968588;
