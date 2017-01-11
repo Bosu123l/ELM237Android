@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\DeviceListActivity.cs" />
+    <Compile Include="Activities\SelectDataToReadActivity.cs" />
     <Compile Include="Commands\BasicCommand.cs" />
     <Compile Include="Commands\Fuel\ConsuptionFuelRateCommand.cs" />
     <Compile Include="Commands\Fuel\FuelPressureCommand.cs" />
@@ -76,6 +77,9 @@
     <None Include="Assets\AboutAssets.txt" />
     <AndroidResource Include="Resources\layout\device_list.axml" />
     <AndroidResource Include="Resources\layout\device_name.axml" />
+    <AndroidResource Include="Resources\layout\SelectDataToReadView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
