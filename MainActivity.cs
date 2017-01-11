@@ -34,12 +34,13 @@ namespace OBDProject
 
         private bool _previouseConnectionState;
 
-        private ListView _listView;
+        private GridView _gridView;
 
         private ArrayAdapter _arrayAdapter;
         private Button _clearButton;
 
         private List<int> _indexesOfSelecedElements;
+        private int counter;
 
         #region Commands
 
@@ -52,8 +53,8 @@ namespace OBDProject
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);
 
-            _clearButton = FindViewById<Button>(Resource.Id.ClearButton);
-            _listView = FindViewById<ListView>(Resource.Id.ElementyODB);
+            _clearButton = FindViewById<Button>(Resource.Id.refreshButton);
+            _gridView = FindViewById<GridView>(Resource.Id.ElementyODB);
 
             _bluetoothManager = new BluetoothManager();
             _bluetoothManager.Connected += _bluetoothManager_Connected;
@@ -65,7 +66,9 @@ namespace OBDProject
 
             _arrayAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1);
 
-            _listView.Adapter = _arrayAdapter;
+            _gridView.Adapter = _arrayAdapter;
+
+            _gridView.NumColumns = 2;
 
             _clearButton.Click += _clearButton_Click;
 
@@ -85,13 +88,37 @@ namespace OBDProject
             Log.Info("++++PRZETWORZONE!+++++", e);
             RunOnUiThread(() =>
             {
-                _arrayAdapter.Add(e);
+                if (_arrayAdapter.Count > _indexesOfSelecedElements.Count)
+                {
+                    var temp = new List<string>();
+                    for (int i = 0; i < _arrayAdapter.Count; i++)
+                    {
+                        if (i == 0)
+                        {
+                            temp.Add((counter++).ToString());
+                        }
+                        else
+                        {
+                            temp.Add((string)_arrayAdapter.GetItem(i));
+                        }
+                    }
+                    _arrayAdapter.Clear();
+                    foreach (var data in temp)
+                    {
+                        _arrayAdapter.Add(data);
+                    }
+
+                    _arrayAdapter.NotifyDataSetChanged();
+                    return;
+                }
+                _arrayAdapter.Add(nameof(_basicCommands));
             });
         }
 
         private void _clearButton_Click(object sender, System.EventArgs e)
         {
-            _arrayAdapter.Clear();
+            //_arrayAdapter.Clear();
+            _command_Response(this, nameof(_arrayAdapter));
         }
 
         private void _timer_Elapsed(object sender, ElapsedEventArgs e)

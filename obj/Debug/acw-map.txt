@@ -6,6 +6,10 @@ OBDProject.Utils.Receiver, OBDProject;md50f6728a8963695c7cf2ed9826420e0c2.Receiv
 OBDProject.Utils.Receiver, OBDProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50f6728a8963695c7cf2ed9826420e0c2.Receiver
 OBDProject.Utils.Receiver;md50f6728a8963695c7cf2ed9826420e0c2.Receiver
 obdproject.utils.Receiver;md50f6728a8963695c7cf2ed9826420e0c2.Receiver
+OBDProject.Adapters.GridAdaper, OBDProject;md5ace16104c9371bcf475bca7b92c33d3c.GridAdaper
+OBDProject.Adapters.GridAdaper, OBDProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5ace16104c9371bcf475bca7b92c33d3c.GridAdaper
+OBDProject.Adapters.GridAdaper;md5ace16104c9371bcf475bca7b92c33d3c.GridAdaper
+obdproject.adapters.GridAdaper;md5ace16104c9371bcf475bca7b92c33d3c.GridAdaper
 OBDProject.Activities.DeviceListActivity, OBDProject;md5527116b622bb92aeb73fcf11aa4b89ee.DeviceListActivity
 OBDProject.Activities.DeviceListActivity, OBDProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5527116b622bb92aeb73fcf11aa4b89ee.DeviceListActivity
 OBDProject.Activities.DeviceListActivity;md5527116b622bb92aeb73fcf11aa4b89ee.DeviceListActivity
