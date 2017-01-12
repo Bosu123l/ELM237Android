@@ -17,7 +17,7 @@ using Timer = System.Timers.Timer;
 
 namespace OBDProject
 {
-    [Activity(Label = "Readed data:", Theme = "@style/MyCustomTheme", MainLauncher = true,  Icon = "@drawable/Auto")]
+    [Activity(Label = "Readed data:", Theme = "@style/MyCustomTheme", MainLauncher = true, Icon = "@drawable/Auto")]
     public class MainActivity : Activity
     {
         private LogManager _logManager;
@@ -84,7 +84,6 @@ namespace OBDProject
             _logManager.SaveLogFile();
             base.OnDestroy();
 
-
             Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
         }
 
@@ -99,28 +98,35 @@ namespace OBDProject
             _logManager.ReadedDataWriteLine(e);
             RunOnUiThread(() =>
                 {
-                    if (_dataFromSelectedElements.Count > _indexesOfSelectedElements.Count)
+                    if (_dataFromSelectedElements.Count >= _indexesOfSelectedElements.Count)
                     {
                         var tempBasicCommand = sender as BasicCommand;
                         if (tempBasicCommand != null)
                         {
                             int index = tempBasicCommand.Position;
-                            //_dataFromSelectedElements[index]=e;
+                            _dataFromSelectedElements[index] = e;
+                            if (e.Contains("Speed"))
+                            {
+                                showNotifaction(e);
+                            }
                         }
-                        if (_tempCounterForIndex > _indexesOfSelectedElements.Count)
+                        if (_tempCounterForIndex >= _indexesOfSelectedElements.Count)
                         {
                             _tempCounterForIndex = 0;
                         }
 
-                        _dataFromSelectedElements[_tempCounterForIndex++] = string.Format("{0}{1}{2}", "otrzymano",
-                            System.Environment.NewLine, _tempCounter++);
-                        _logManager.ReadedDataWriteLine(string.Format("{0}{1}{2}", "otrzymano",
-                            System.Environment.NewLine, _tempCounter));
+                        //_dataFromSelectedElements[_tempCounterForIndex++] = string.Format("{0}{1}{2}", "otrzymano",
+                        //    System.Environment.NewLine, _tempCounter++);
+                        //_logManager.ReadedDataWriteLine(string.Format("{0}{1}{2}", "otrzymano",
+                        //    System.Environment.NewLine, _tempCounter));
+                        //showNotifaction(string.Format("{0}{1}{2}", "otrzymano",
+                        //    System.Environment.NewLine, _tempCounter));
 
                     }
                     else
                     {
-                        _dataFromSelectedElements.Add("początek");
+                        _dataFromSelectedElements.Add(e);
+                        // _dataFromSelectedElements.Add("początek");
                     }
                     _arrayAdapter.Clear();
                     _arrayAdapter.AddAll(_dataFromSelectedElements);
@@ -128,10 +134,30 @@ namespace OBDProject
                 });
         }
 
+        private void showNotifaction(string data)
+        {
+            // Instantiate the builder and set notification elements:
+            Notification.Builder builder = new Notification.Builder(this)
+                .SetContentTitle("Sample Notification")
+                .SetContentText(data)
+                .SetSmallIcon(Resource.Drawable.Auto);
+
+            // Build the notification:
+            Notification notification = builder.Build();
+
+            // Get the notification manager:
+            NotificationManager notificationManager =
+                GetSystemService(Context.NotificationService) as NotificationManager;
+
+            // Publish the notification:
+            const int notificationId = 0;
+            notificationManager.Notify(notificationId, notification);
+        }
+
         private void _clearButton_Click(object sender, System.EventArgs e)
         {
-            //_arrayAdapter.Clear();
-            _command_Response(this, nameof(_arrayAdapter));
+            _arrayAdapter.Clear();
+            //_command_Response(this, nameof(_arrayAdapter));
         }
 
         private void _timer_Elapsed(object sender, ElapsedEventArgs e)
@@ -199,6 +225,7 @@ namespace OBDProject
                     this.FinishAffinity();
 
                     return true;
+
                 case Resource.Id.selectCommand:
                     var selectDataIntent = new Intent(this, typeof(SelectDataToReadActivity));
                     StartActivityForResult(selectDataIntent, 1);
