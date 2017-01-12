@@ -2,7 +2,7 @@
 <xs:schema xmlns:android="http://schemas.android.com/apk/res/android" attributeFormDefault="qualified" elementFormDefault="unqualified" targetNamespace="http://schemas.android.com/apk/res/android" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v23</xs:documentation>
-    <xs:documentation>12.01.2017 12:48:45</xs:documentation>
+    <xs:documentation>12.01.2017 13:17:30</xs:documentation>
   </xs:annotation>
   <xs:attribute name="accessibilityLiveRegion">
     <xs:annotation>
@@ -390,6 +390,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -427,6 +428,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -622,6 +624,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -659,6 +662,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -1149,6 +1153,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -1186,6 +1191,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -1603,6 +1609,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -1640,6 +1647,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -2314,6 +2322,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -2351,6 +2360,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -2565,6 +2575,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -2602,6 +2613,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -2797,6 +2809,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -2834,6 +2847,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -3411,6 +3425,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -3448,6 +3463,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -3662,6 +3678,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -3699,6 +3716,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -4568,6 +4586,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -4605,6 +4624,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -6937,6 +6957,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -6974,6 +6995,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -7169,6 +7191,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -7206,6 +7229,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -7636,6 +7660,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -7673,6 +7698,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -8399,6 +8425,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -8436,6 +8463,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -8853,6 +8881,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -8890,6 +8919,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -9307,6 +9337,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -9344,6 +9375,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -9801,6 +9833,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -9838,6 +9871,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -10255,6 +10289,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -10292,6 +10327,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -10709,6 +10745,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -10746,6 +10783,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -10960,6 +10998,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -10997,6 +11036,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -11747,6 +11787,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -11784,6 +11825,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -13724,6 +13766,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -13761,6 +13804,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -14336,6 +14380,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -14373,6 +14418,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -14855,6 +14901,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -14892,6 +14939,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -17203,6 +17251,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -17240,6 +17289,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -18975,6 +19025,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -19012,6 +19063,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -19939,6 +19991,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -19976,6 +20029,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -21953,6 +22007,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -21990,6 +22045,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -24186,6 +24242,18 @@
       </xs:union>
     </xs:simpleType>
   </xs:attribute>
+  <xs:attribute name="layout_weight">
+    <xs:annotation>
+      <xs:documentation></xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union memberTypes="xs:string">
+        <xs:simpleType>
+          <xs:restriction base="xs:string" />
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:attribute>
   <xs:attribute name="layout_width">
     <xs:annotation>
       <xs:documentation>Specifies the basic width of the view. This is a required attribute for any view inside of a containing layout manager. Its value may be a dimension (such as "12dip") for a constant width or one of the special constants.</xs:documentation>
@@ -24745,6 +24813,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -24782,6 +24851,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -27922,6 +27992,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -27959,6 +28030,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -28154,6 +28226,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -28191,6 +28264,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -28386,6 +28460,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -28423,6 +28498,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -28618,6 +28694,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -28655,6 +28732,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -29229,6 +29307,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -29266,6 +29345,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -29683,6 +29763,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -29720,6 +29801,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -30530,6 +30612,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -30567,6 +30650,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -31348,6 +31432,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -31385,6 +31470,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -31834,6 +31920,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -31871,6 +31958,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -32658,6 +32746,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -32695,6 +32784,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -34866,6 +34956,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -34903,6 +34994,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -35392,6 +35484,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -35429,6 +35522,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -36161,6 +36255,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -36198,6 +36293,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -36683,6 +36779,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -36720,6 +36817,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -37352,6 +37450,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -37389,6 +37488,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -39599,6 +39699,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -39636,6 +39737,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -41544,6 +41646,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -41581,6 +41684,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -41998,6 +42102,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -42035,6 +42140,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -42452,6 +42558,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -42489,6 +42596,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -42906,6 +43014,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -42943,6 +43052,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -46965,6 +47075,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -47002,6 +47113,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -47290,6 +47402,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -47327,6 +47440,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -48028,6 +48142,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -48065,6 +48180,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -48575,6 +48691,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -48612,6 +48729,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -49158,6 +49276,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -49195,6 +49314,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -49390,6 +49510,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -49427,6 +49548,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -50713,6 +50835,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -50750,6 +50873,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -51167,6 +51291,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -51204,6 +51329,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />
@@ -52143,6 +52269,7 @@
             <xs:enumeration value="@color/MintCream" />
             <xs:enumeration value="@color/MistyRose" />
             <xs:enumeration value="@color/Moccasin" />
+            <xs:enumeration value="@color/mycustomtheme_background" />
             <xs:enumeration value="@color/NavajoWhite" />
             <xs:enumeration value="@color/Navy" />
             <xs:enumeration value="@color/OldLace" />
@@ -52180,6 +52307,7 @@
             <xs:enumeration value="@color/SteelBlue" />
             <xs:enumeration value="@color/Tan" />
             <xs:enumeration value="@color/Teal" />
+            <xs:enumeration value="@color/theme_custom1_background" />
             <xs:enumeration value="@color/theme_devicedefault_background" />
             <xs:enumeration value="@color/Thistle" />
             <xs:enumeration value="@color/Tomato" />

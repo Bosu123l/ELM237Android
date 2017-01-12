@@ -55,6 +55,7 @@
     <Compile Include="Activities\SelectDataToReadActivity.cs" />
     <Compile Include="Adapters\GridAdaper.cs" />
     <Compile Include="Commands\BasicCommand.cs" />
+    <Compile Include="Commands\CarStatus\TroubleCodesCommand.cs" />
     <Compile Include="Commands\Fuel\ConsuptionFuelRateCommand.cs" />
     <Compile Include="Commands\Fuel\FuelPressureCommand.cs" />
     <Compile Include="Commands\Temperature\EngineCoolantTemperatureCommand.cs" />
@@ -109,9 +110,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </AndroidResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Commands\CarStatus\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <AndroidResource Include="Resources\layout\TextViewRow.xml" />
   </ItemGroup>

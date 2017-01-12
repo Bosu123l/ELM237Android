@@ -465,7 +465,13 @@ namespace OBDProject
 			public const int YellowGreen = 2130968656;
 			
 			// aapt resource value: 0x7f04008c
-			public const int theme_devicedefault_background = 2130968716;
+			public const int mycustomtheme_background = 2130968716;
+			
+			// aapt resource value: 0x7f04008d
+			public const int theme_custom1_background = 2130968717;
+			
+			// aapt resource value: 0x7f04008e
+			public const int theme_devicedefault_background = 2130968718;
 			
 			static Color()
 			{

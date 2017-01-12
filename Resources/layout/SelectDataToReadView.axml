@@ -15,5 +15,6 @@
         android:text="Confirm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/ConfirmButton" />
+        android:id="@+id/ConfirmButton"
+        android:layout_margin="5dp" />
 </LinearLayout>
