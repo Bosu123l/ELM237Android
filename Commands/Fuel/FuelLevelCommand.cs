@@ -2,12 +2,13 @@ using System;
 using System.Linq;
 using System.Text;
 using Android.Bluetooth;
+using OBDProject.Utils;
 
 namespace OBDProject.Commands.Fuel
 {
     internal class FuelLevelCommand : BasicCommand
     {
-        public FuelLevelCommand(BluetoothSocket socket, object readFromDeviceLock, int position) : base(Encoding.ASCII.GetBytes("01 2F\r"), socket, "%", readFromDeviceLock, position)
+        public FuelLevelCommand(BluetoothSocket socket, object readFromDeviceLock, int position, LogManager logManager) : base(Encoding.ASCII.GetBytes("01 2F\r"), socket, "%", readFromDeviceLock, position, logManager)
         {
             Source = "Fuel Level";
         }

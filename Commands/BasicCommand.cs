@@ -1,5 +1,6 @@
 using Android.Bluetooth;
 using Android.Util;
+using OBDProject.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,14 +35,20 @@ namespace OBDProject.Commands
         protected string Source;
         private readonly BluetoothSocket _socket;
         private readonly byte[] _command;
+        private LogManager _logManager;
 
         public event EventHandler<string> Response;
 
-        protected BasicCommand(byte[] command, BluetoothSocket socket, string unit, object readFromDeviceLock, int position)
+        protected BasicCommand(byte[] command, BluetoothSocket socket, string unit, object readFromDeviceLock, int position, LogManager logManager)
         {
+            if (logManager == null)
+            {
+                throw new ArgumentException("Manager log cannot be null!");
+            }
+
             if (command == null)
             {
-                throw new ArgumentNullException("command cannot by null!");
+                throw new ArgumentNullException("command cannot be null!");
             }
             if (socket == null)
             {
@@ -57,6 +64,7 @@ namespace OBDProject.Commands
             ReadFromDeviceLock = readFromDeviceLock;
             Unit = unit;
             Position = position;
+            _logManager = logManager;
         }
 
         protected abstract void PrepereFindResult();
@@ -98,6 +106,7 @@ namespace OBDProject.Commands
                     catch (Exception ex)
                     {
                         Log.Error("++++++ERROR++++++", ex.Message);
+                        _logManager.ErrorWriteLine(ex.Message);
                     }
                 }
             });
@@ -125,6 +134,7 @@ namespace OBDProject.Commands
             }
             catch (Exception ex)
             {
+                _logManager.ErrorWriteLine(ex.Message);
                 throw new Exception(string.Format("Error while data was readed: {0}", ex.Message));
             }
             finally
@@ -135,7 +145,7 @@ namespace OBDProject.Commands
             clearedData = ClearResponseByRegex(clearedData, WhitespacePattern);
 
             Log.Info("++++++CLEARED MESSAGE++++++", clearedData);
-
+            _logManager.InfoWriteLine(string.Format("{0}{1}", "++++++CLEARED MESSAGE++++++", clearedData));
             return clearedData;
         }
 
@@ -187,8 +197,7 @@ namespace OBDProject.Commands
             {
                 throw new Exception(string.Format("Error while fillBuffer: {0}", ex.Message));
             }
-
-            Log.Info("++++++LIST OF NUMBERS IN MESSAGE++++++", string.Join(",", buffer.Select(x => x.ToString())));
+            _logManager.InfoWriteLine(string.Format("{0}{1}", "++++++LIST OF NUMBERS IN MESSAGE++++++", string.Join(",", buffer.Select(x => x.ToString()))));
 
             return buffer;
         }

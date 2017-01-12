@@ -2,12 +2,13 @@ using System;
 using Android.Bluetooth;
 using System.Linq;
 using System.Text;
+using OBDProject.Utils;
 
 namespace OBDProject.Commands
 {
     public class VehicleSpeedCommand : BasicCommand
     {
-        public VehicleSpeedCommand(BluetoothSocket socket, object readFromDeviceLock, int position) : base(Encoding.ASCII.GetBytes("01 0D\r"), socket, "km/h", readFromDeviceLock, position)
+        public VehicleSpeedCommand(BluetoothSocket socket, object readFromDeviceLock, int position, LogManager logManager) : base(Encoding.ASCII.GetBytes("01 0D\r"), socket, "km/h", readFromDeviceLock, position, logManager)
         {
             //01	Show current data
             //0D	1	Vehicle speed	0	255	km/h    A

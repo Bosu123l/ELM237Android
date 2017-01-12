@@ -20,25 +20,22 @@ namespace OBDProject
     [Activity(Label = "Android OBDII", MainLauncher = true, Icon = "@drawable/Auto")]
     public class MainActivity : Activity
     {
-        public const double Interval = 500;
+        private LogManager _logManager;
 
+        private const double _interval = 500;
         private object _readFromDeviceLock;
-
-
         private BluetoothManager _bluetoothManager;
         private string _address;
-
         private Timer _timer;
-
         private bool _previouseConnectionState;
 
         private GridView _gridView;
-
         private ArrayAdapter _arrayAdapter;
         private Button _clearButton;
 
         private List<int> _indexesOfSelectedElements;
         private List<string> _dataFromSelectedElements;
+
         #region Commands
 
         private List<BasicCommand> _basicCommands;
@@ -47,6 +44,7 @@ namespace OBDProject
 
         private int _tempCounter;
         private int _tempCounterForIndex;
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -57,11 +55,13 @@ namespace OBDProject
 
             _bluetoothManager = new BluetoothManager();
             _bluetoothManager.Connected += _bluetoothManager_Connected;
-            _timer = new Timer(Interval);
+            _timer = new Timer(_interval);
             _timer.Stop();
             _timer.Elapsed += _timer_Elapsed;
 
             _readFromDeviceLock = new object();
+
+            _logManager = new LogManager();
 
             _dataFromSelectedElements = new List<string>();
 
@@ -81,17 +81,22 @@ namespace OBDProject
             ClearCommandCollection();
 
             _bluetoothManager.Dispose();
+            _logManager.SaveLogFile();
             base.OnDestroy();
+
+
+            Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
         }
 
         private void _command_Response(object sender, string e)
         {
-            if (_indexesOfSelectedElements ==null || _indexesOfSelectedElements.Count.Equals(0))
+            if (_indexesOfSelectedElements == null || _indexesOfSelectedElements.Count.Equals(0))
             {
                 ShowAlert("Elements to display is not selected!");
                 return;
             }
-            Log.Info("++++PRZETWORZONE!+++++", e);
+
+            _logManager.ReadedDataWriteLine(e);
             RunOnUiThread(() =>
                 {
                     if (_dataFromSelectedElements.Count > _indexesOfSelectedElements.Count)
@@ -106,9 +111,12 @@ namespace OBDProject
                         {
                             _tempCounterForIndex = 0;
                         }
-                        
+
                         _dataFromSelectedElements[_tempCounterForIndex++] = string.Format("{0}{1}{2}", "otrzymano",
                             System.Environment.NewLine, _tempCounter++);
+                        _logManager.ReadedDataWriteLine(string.Format("{0}{1}{2}", "otrzymano",
+                            System.Environment.NewLine, _tempCounter++));
+
                     }
                     else
                     {
@@ -154,6 +162,7 @@ namespace OBDProject
             if (e)
             {
                 Toast.MakeText(Application.Context, string.Format("Połaczono z {0}", _address), ToastLength.Long).Show();
+                _logManager.InfoWriteLine(string.Format("Połaczono z {0}", _address));
                 if (!_timer.Enabled)
                 {
                     _timer.Start();
@@ -164,10 +173,12 @@ namespace OBDProject
                 if (_previouseConnectionState)
                 {
                     Toast.MakeText(Application.Context, "Stracono Połaczenie", ToastLength.Long).Show();
+                    _logManager.WarringWriteLine("Stracono Połaczenie");
                 }
                 else
                 {
                     Toast.MakeText(Application.Context, "Brak połaczenia", ToastLength.Long).Show();
+                    _logManager.WarringWriteLine("Brak połaczenia");
                 }
             }
             _previouseConnectionState = e;
@@ -184,6 +195,10 @@ namespace OBDProject
         {
             switch (item.ItemId)
             {
+                case Resource.Id.closeApplication:
+                    this.FinishAffinity();
+                 
+                    return true;
                 case Resource.Id.selectCommand:
                     var selectDataIntent = new Intent(this, typeof(SelectDataToReadActivity));
                     StartActivityForResult(selectDataIntent, 1);
@@ -221,6 +236,7 @@ namespace OBDProject
             catch (Exception ex)
             {
                 Log.Error("Cleaning Command Colection ERROR!", ex.Message);
+                _logManager.ErrorWriteLine("Cleaning Command Colection ERROR!");
             }
         }
 
@@ -271,39 +287,39 @@ namespace OBDProject
             int position = 0;
             if (_indexesOfSelectedElements.Contains(0))
             {
-                _basicCommands.Add(new VehicleSpeedCommand(_bluetoothManager.Socket, _readFromDeviceLock, position++));
+                _basicCommands.Add(new VehicleSpeedCommand(_bluetoothManager.Socket, _readFromDeviceLock, position++, _logManager));
             }
             if (_indexesOfSelectedElements.Contains(1))
             {
-                _basicCommands.Add(new ThrottlePositionCommand(_bluetoothManager.Socket, _readFromDeviceLock, position++));
+                _basicCommands.Add(new ThrottlePositionCommand(_bluetoothManager.Socket, _readFromDeviceLock, position++, _logManager));
             }
             if (_indexesOfSelectedElements.Contains(2))
             {
-                _basicCommands.Add(new EngineRPMCommand(_bluetoothManager.Socket, _readFromDeviceLock, position++));
+                _basicCommands.Add(new EngineRPMCommand(_bluetoothManager.Socket, _readFromDeviceLock, position++, _logManager));
             }
             if (_indexesOfSelectedElements.Contains(3))
             {
-                _basicCommands.Add(new ConsuptionFuelRateCommand(_bluetoothManager.Socket, _readFromDeviceLock, position++));
+                _basicCommands.Add(new ConsuptionFuelRateCommand(_bluetoothManager.Socket, _readFromDeviceLock, position++, _logManager));
             }
             if (_indexesOfSelectedElements.Contains(4))
             {
-                _basicCommands.Add(new FuelLevelCommand(_bluetoothManager.Socket, _readFromDeviceLock, position++));
+                _basicCommands.Add(new FuelLevelCommand(_bluetoothManager.Socket, _readFromDeviceLock, position++, _logManager));
             }
             if (_indexesOfSelectedElements.Contains(5))
             {
-                _basicCommands.Add(new FuelPressureCommand(_bluetoothManager.Socket, _readFromDeviceLock, position++));
+                _basicCommands.Add(new FuelPressureCommand(_bluetoothManager.Socket, _readFromDeviceLock, position++, _logManager));
             }
             if (_indexesOfSelectedElements.Contains(6))
             {
-                _basicCommands.Add(new FuelTypeCommand(_bluetoothManager.Socket, _readFromDeviceLock, position++));
+                _basicCommands.Add(new FuelTypeCommand(_bluetoothManager.Socket, _readFromDeviceLock, position++, _logManager));
             }
             if (_indexesOfSelectedElements.Contains(7))
             {
-                _basicCommands.Add(new EngineOilTemperatureCommand(_bluetoothManager.Socket, _readFromDeviceLock, position++));
+                _basicCommands.Add(new EngineOilTemperatureCommand(_bluetoothManager.Socket, _readFromDeviceLock, position++, _logManager));
             }
             if (_indexesOfSelectedElements.Contains(8))
             {
-                _basicCommands.Add(new EngineCoolantTemperatureCommand(_bluetoothManager.Socket, _readFromDeviceLock, position++));
+                _basicCommands.Add(new EngineCoolantTemperatureCommand(_bluetoothManager.Socket, _readFromDeviceLock, position++, _logManager));
             }
         }
 
