@@ -117,7 +117,7 @@ namespace OBDProject
 
                         //_dataFromSelectedElements[_tempCounterForIndex++] = string.Format("{0}{1}{2}", "otrzymano",
                         //    System.Environment.NewLine, _tempCounter++);
-                        //_logManager.ReadedDataWriteLine(string.Format("{0}{1}{2}", "otrzymano",
+                        //LogManager.ReadedDataWriteLine(string.Format("{0}{1}{2}", "otrzymano",
                         //    System.Environment.NewLine, _tempCounter));
                         //showNotifaction(string.Format("{0}{1}{2}", "otrzymano",
                         //    System.Environment.NewLine, _tempCounter));

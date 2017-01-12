@@ -33,9 +33,9 @@ namespace OBDProject.Commands
         protected List<int> ReadedData;
         protected string Unit;
         protected string Source;
-        private readonly BluetoothSocket _socket;
+        protected readonly BluetoothSocket _socket;
         private readonly byte[] _command;
-        private LogManager _logManager;
+        protected LogManager LogManager;
 
         public event EventHandler<string> Response;
 
@@ -64,7 +64,7 @@ namespace OBDProject.Commands
             ReadFromDeviceLock = readFromDeviceLock;
             Unit = unit;
             Position = position;
-            _logManager = logManager;
+            LogManager = logManager;
         }
 
         protected abstract void PrepereFindResult();
@@ -75,7 +75,7 @@ namespace OBDProject.Commands
             tempHandler?.Invoke(this, response);
         }
 
-        private void SendCommand()
+        protected void SendCommand()
         {
             try
             {
@@ -91,7 +91,7 @@ namespace OBDProject.Commands
             }
         }
 
-        public async Task ReadResult()
+        public virtual async Task ReadResult()
         {
             await Task.Run(() =>
             {
@@ -106,7 +106,7 @@ namespace OBDProject.Commands
                     catch (Exception ex)
                     {
                         Log.Error("++++++ERROR++++++", ex.Message);
-                        _logManager.ErrorWriteLine(ex.Message);
+                        LogManager.ErrorWriteLine(ex.Message);
                     }
                 }
             });
@@ -134,7 +134,7 @@ namespace OBDProject.Commands
             }
             catch (Exception ex)
             {
-                _logManager.ErrorWriteLine(ex.Message);
+                LogManager.ErrorWriteLine(ex.Message);
                 throw new Exception(string.Format("Error while data was readed: {0}", ex.Message));
             }
             finally
@@ -145,7 +145,7 @@ namespace OBDProject.Commands
             clearedData = ClearResponseByRegex(clearedData, WhitespacePattern);
 
             Log.Info("++++++CLEARED MESSAGE++++++", clearedData);
-            _logManager.InfoWriteLine(string.Format("{0}{1}", "++++++CLEARED MESSAGE++++++", clearedData));
+            LogManager.InfoWriteLine(string.Format("{0}{1}", "++++++CLEARED MESSAGE++++++", clearedData));
             return clearedData;
         }
 
@@ -160,7 +160,7 @@ namespace OBDProject.Commands
             return match.Success;
         }
 
-        private string CheckForErrors(string data)
+        protected virtual string CheckForErrors(string data)
         {
             var temp = CheckIfNull(data);
             if (CheckIfMatchPattern(temp, UnableToConnect))
@@ -197,7 +197,7 @@ namespace OBDProject.Commands
             {
                 throw new Exception(string.Format("Error while fillBuffer: {0}", ex.Message));
             }
-            _logManager.InfoWriteLine(string.Format("{0}{1}", "++++++LIST OF NUMBERS IN MESSAGE++++++", string.Join(",", buffer.Select(x => x.ToString()))));
+            LogManager.InfoWriteLine(string.Format("{0}{1}", "++++++LIST OF NUMBERS IN MESSAGE++++++", string.Join(",", buffer.Select(x => x.ToString()))));
 
             return buffer;
         }
