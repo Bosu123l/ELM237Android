@@ -6,7 +6,7 @@ namespace OBDProject.Commands
 {
     public class EngineRPMCommand : BasicCommand
     {
-        public EngineRPMCommand(BluetoothSocket socket, object readFromDeviceLock) : base(Encoding.ASCII.GetBytes("01 0C\r"), socket, "RPM", readFromDeviceLock)
+        public EngineRPMCommand(BluetoothSocket socket, object readFromDeviceLock,int position) : base(Encoding.ASCII.GetBytes("01 0C\r"), socket, "RPM", readFromDeviceLock, position)
         {
             //01	Show current data
             // 0C	2	Engine RPM	0	16,383.75	rpm	{\displaystyle {\frac {256A+B}{4}}} {\displaystyle {\frac {256A+B}{4}}}

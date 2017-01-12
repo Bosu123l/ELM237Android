@@ -6,7 +6,7 @@ namespace OBDProject.Commands.Fuel
 {
     internal class FuelPressureCommand : BasicCommand
     {
-        public FuelPressureCommand(BluetoothSocket socket, object readFromDeviceLock) : base(Encoding.ASCII.GetBytes("01 0A\r"), socket, "kPa", readFromDeviceLock)
+        public FuelPressureCommand(BluetoothSocket socket, object readFromDeviceLock, int position) : base(Encoding.ASCII.GetBytes("01 0A\r"), socket, "kPa", readFromDeviceLock, position)
         {
             Source = "FuelPressureCommand";
         }

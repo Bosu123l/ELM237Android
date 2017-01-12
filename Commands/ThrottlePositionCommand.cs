@@ -6,7 +6,7 @@ namespace OBDProject.Commands
 {
     public class ThrottlePositionCommand : BasicCommand
     {
-        public ThrottlePositionCommand(BluetoothSocket socket, object readFromDeviceLock) : base(Encoding.ASCII.GetBytes("01 11\r"), socket, "%", readFromDeviceLock)
+        public ThrottlePositionCommand(BluetoothSocket socket, object readFromDeviceLock, int position) : base(Encoding.ASCII.GetBytes("01 11\r"), socket, "%", readFromDeviceLock, position)
         {
             //01	Show current data
             //11	1	Throttle position	0	100	 %	(100/255)*A

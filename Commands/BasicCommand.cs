@@ -18,6 +18,11 @@ namespace OBDProject.Commands
             private set;
         }
 
+        public int Position
+        {
+            get;
+        }
+
         protected readonly Regex WhitespacePattern = new Regex(@"\s+");
         protected readonly Regex BusinitPattern = new Regex(@"(BUS INIT) | (BUSINIT) | (\\.)");
         protected readonly Regex SearchingPattern = new Regex(@"SEARCHING");
@@ -31,8 +36,8 @@ namespace OBDProject.Commands
         private readonly byte[] _command;
 
         public event EventHandler<string> Response;
-      
-        protected BasicCommand(byte[] command, BluetoothSocket socket, string unit, object readFromDeviceLock)
+
+        protected BasicCommand(byte[] command, BluetoothSocket socket, string unit, object readFromDeviceLock, int position)
         {
             if (command == null)
             {
@@ -50,6 +55,8 @@ namespace OBDProject.Commands
             _socket = socket;
             ReadyData = string.Empty;
             ReadFromDeviceLock = readFromDeviceLock;
+            Unit = unit;
+            Position = position;
         }
 
         protected abstract void PrepereFindResult();

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/rowTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:padding="6dp"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="test"
+        android:background="@android:drawable/dialog_holo_light_frame" >
+</TextView>

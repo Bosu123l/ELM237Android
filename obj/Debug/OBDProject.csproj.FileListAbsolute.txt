@@ -98,7 +98,10 @@ C:\Users\lukas\Source\Repos\ELM237Android\obj\Debug\android\assets\System.Xml.dl
 C:\Users\lukas\Source\Repos\ELM237Android\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
 C:\Users\lukas\Source\Repos\ELM237Android\obj\Debug\OBDProject.dll.mdb
 C:\Users\Łukasz\Source\Repos\ELM237Android\obj\Debug\res\layout\selectdatatoreadview.xml
+C:\Users\Łukasz\Source\Repos\ELM237Android\obj\Debug\res\layout\wrappanel.xml
+C:\Users\Łukasz\Source\Repos\ELM237Android\obj\Debug\res\layout\textviewrow.xml
 C:\Users\Łukasz\Source\Repos\ELM237Android\bin\Debug\OBDProject.dll.mdb
+C:\Users\Łukasz\Source\Repos\ELM237Android\obj\Debug\OBDProject.csprojResolveAssemblyReference.cache
 C:\Users\Łukasz\Source\Repos\ELM237Android\bin\Debug\Java.Interop.dll.mdb
 C:\Users\Łukasz\Source\Repos\ELM237Android\bin\Debug\Mono.Android.dll.mdb
 C:\Users\Łukasz\Source\Repos\ELM237Android\bin\Debug\mscorlib.dll.mdb
@@ -122,7 +125,5 @@ C:\Users\Łukasz\Source\Repos\ELM237Android\obj\Debug\android\assets\System.Runt
 C:\Users\Łukasz\Source\Repos\ELM237Android\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
 C:\Users\Łukasz\Source\Repos\ELM237Android\obj\Debug\android\assets\System.Xml.dll.mdb
 C:\Users\Łukasz\Source\Repos\ELM237Android\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
-C:\Users\Łukasz\Source\Repos\ELM237Android\obj\Debug\OBDProject.csprojResolveAssemblyReference.cache
-C:\Users\Łukasz\Source\Repos\ELM237Android\obj\Debug\res\layout\wrappanel.xml
 C:\Users\Łukasz\Source\Repos\ELM237Android\obj\Debug\OBDProject.dll.mdb
 C:\Users\Łukasz\Source\Repos\ELM237Android\bin\Debug\OBDProject.dll.mdb

@@ -6,7 +6,7 @@ namespace OBDProject.Commands
 {
     public class ConsuptionFuelRateCommand : BasicCommand
     {
-        public ConsuptionFuelRateCommand(BluetoothSocket socket, object readFromDeviceLock) : base(Encoding.ASCII.GetBytes("01 5E\r"), socket, "L/h", readFromDeviceLock)
+        public ConsuptionFuelRateCommand(BluetoothSocket socket, object readFromDeviceLock, int position) : base(Encoding.ASCII.GetBytes("01 5E\r"), socket, "L/h", readFromDeviceLock, position)
         {
             Source = "ConsuptionFuelRateCommand";
         }

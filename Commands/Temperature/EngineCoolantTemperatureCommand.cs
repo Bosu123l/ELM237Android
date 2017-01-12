@@ -6,7 +6,7 @@ namespace OBDProject.Commands.Temperature
 {
     internal class EngineCoolantTemperatureCommand : BasicCommand
     {
-        public EngineCoolantTemperatureCommand(BluetoothSocket socket, object readFromDeviceLock) : base(Encoding.ASCII.GetBytes("01 05\r"), socket, "°C", readFromDeviceLock)
+        public EngineCoolantTemperatureCommand(BluetoothSocket socket, object readFromDeviceLock, int position) : base(Encoding.ASCII.GetBytes("01 05\r"), socket, "°C", readFromDeviceLock, position)
         {
             Source = "EngineCoolantTemperatureCommand";
         }

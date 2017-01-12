@@ -6,7 +6,7 @@ namespace OBDProject.Commands
 {
     internal class FuelLevelCommand : BasicCommand
     {
-        public FuelLevelCommand(BluetoothSocket socket, object readFromDeviceLock) : base(Encoding.ASCII.GetBytes("01 2F\r"), socket, "%", readFromDeviceLock)
+        public FuelLevelCommand(BluetoothSocket socket, object readFromDeviceLock, int position) : base(Encoding.ASCII.GetBytes("01 2F\r"), socket, "%", readFromDeviceLock, position)
         {
             Source = "FuelLevelCommand";
         }

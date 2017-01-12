@@ -75,8 +75,8 @@ namespace OBDProject
 			// aapt resource value: 0x7f060004
 			public const int button_scan = 2131099652;
 			
-			// aapt resource value: 0x7f06000c
-			public const int discoverable = 2131099660;
+			// aapt resource value: 0x7f06000d
+			public const int discoverable = 2131099661;
 			
 			// aapt resource value: 0x7f060005
 			public const int linearLayout1 = 2131099653;
@@ -91,10 +91,13 @@ namespace OBDProject
 			public const int refreshButton = 2131099655;
 			
 			// aapt resource value: 0x7f06000a
-			public const int scan = 2131099658;
+			public const int rowTextView = 2131099658;
 			
 			// aapt resource value: 0x7f06000b
-			public const int selectCommand = 2131099659;
+			public const int scan = 2131099659;
+			
+			// aapt resource value: 0x7f06000c
+			public const int selectCommand = 2131099660;
 			
 			// aapt resource value: 0x7f060002
 			public const int title_new_devices = 2131099650;
@@ -128,7 +131,10 @@ namespace OBDProject
 			public const int SelectDataToReadView = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int WrapPanel = 2130903044;
+			public const int TextViewRow = 2130903044;
+			
+			// aapt resource value: 0x7f030005
+			public const int WrapPanel = 2130903045;
 			
 			static Layout()
 			{
