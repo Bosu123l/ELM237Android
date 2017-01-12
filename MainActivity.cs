@@ -20,12 +20,10 @@ namespace OBDProject
     [Activity(Label = "Android OBDII", MainLauncher = true, Icon = "@drawable/Auto")]
     public class MainActivity : Activity
     {
-        public const double INTERVAL = 500;
+        public const double Interval = 500;
 
         private object _readFromDeviceLock;
 
-        private const int REQUEST_CONNECT_DEVICE = 1;
-        private const int CannotConnect = 2;
 
         private BluetoothManager _bluetoothManager;
         private string _address;
@@ -47,8 +45,8 @@ namespace OBDProject
 
         #endregion Commands
 
-        private int tempCounter;
-        private int tempCounterForIndex;
+        private int _tempCounter;
+        private int _tempCounterForIndex;
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -59,7 +57,7 @@ namespace OBDProject
 
             _bluetoothManager = new BluetoothManager();
             _bluetoothManager.Connected += _bluetoothManager_Connected;
-            _timer = new Timer(INTERVAL);
+            _timer = new Timer(Interval);
             _timer.Stop();
             _timer.Elapsed += _timer_Elapsed;
 
@@ -88,6 +86,11 @@ namespace OBDProject
 
         private void _command_Response(object sender, string e)
         {
+            if (_indexesOfSelectedElements ==null || _indexesOfSelectedElements.Count.Equals(0))
+            {
+                ShowAlert("Elements to display is not selected!");
+                return;
+            }
             Log.Info("++++PRZETWORZONE!+++++", e);
             RunOnUiThread(() =>
                 {
@@ -97,13 +100,15 @@ namespace OBDProject
                         if (tempBasicCommand != null)
                         {
                             int index = tempBasicCommand.Position;
+                            //_dataFromSelectedElements[index]=e;
                         }
-                        if (tempCounterForIndex > _indexesOfSelectedElements.Count)
+                        if (_tempCounterForIndex > _indexesOfSelectedElements.Count)
                         {
-                            tempCounterForIndex = 0;
+                            _tempCounterForIndex = 0;
                         }
-                        _dataFromSelectedElements[tempCounterForIndex++] = string.Format("{0}{1}{2}", "otrzymano",
-                            System.Environment.NewLine, tempCounter++);
+                        
+                        _dataFromSelectedElements[_tempCounterForIndex++] = string.Format("{0}{1}{2}", "otrzymano",
+                            System.Environment.NewLine, _tempCounter++);
                     }
                     else
                     {
@@ -202,6 +207,9 @@ namespace OBDProject
 
         private void ClearCommandCollection()
         {
+            _dataFromSelectedElements.Clear();
+            _arrayAdapter.Clear();
+            _arrayAdapter.NotifyDataSetChanged();
             try
             {
                 foreach (var basicCommand in _basicCommands)
@@ -222,6 +230,7 @@ namespace OBDProject
 
             if (resultCode == Result.Ok)
             {
+                ClearCommandCollection();
                 switch (resultFromActivity)
                 {
                     case DeviceListActivity.ActivityReturned:
@@ -236,15 +245,6 @@ namespace OBDProject
                             _bluetoothManager.Connect(_address);
 
                             ClearCommandCollection();
-                            //"Vehicle Speed",
-                            //Throttle Position
-                            // "Engine RPM",
-                            // "Consuption Fuel Rate",
-                            // "Fuel Level",
-                            // "Fuel Pressure",
-                            // "Fuel Type",
-                            // "Engine Oil Temperature",
-                            // "Engine Coolant Temperature"
                             AddSelectedElements();
 
                             foreach (var basicCommand in _basicCommands)

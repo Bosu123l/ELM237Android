@@ -1,3 +1,4 @@
+using System;
 using Android.Bluetooth;
 using System.Linq;
 using System.Text;
@@ -10,14 +11,14 @@ namespace OBDProject.Commands
         {
             //01	Show current data
             //0D	1	Vehicle speed	0	255	km/h    A
-            Source = "VehicleSpeedCommand";
+            Source = "Vehicle Speed";
         }
 
         protected override void PrepereFindResult()
         {
             if (base.ReadedData.Any())
             {
-                OnResponse(string.Format("{0} {1} {2}", Source, base.ReadedData[2], Unit));
+                OnResponse(string.Format("{0}{1}{2} {3}", Source, Environment.NewLine, base.ReadedData[2], base.Unit));
             }
         }
     }

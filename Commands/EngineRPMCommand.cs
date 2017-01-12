@@ -1,3 +1,4 @@
+using System;
 using Android.Bluetooth;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace OBDProject.Commands
         {
             //01	Show current data
             // 0C	2	Engine RPM	0	16,383.75	rpm	{\displaystyle {\frac {256A+B}{4}}} {\displaystyle {\frac {256A+B}{4}}}
-            Source = "EngineRPMCommand";
+            Source = "Engine RPM";
         }
 
         protected override void PrepereFindResult()
@@ -18,7 +19,7 @@ namespace OBDProject.Commands
             if (base.ReadedData.Any())
             {
                 var value = (base.ReadedData[2] * 256f + base.ReadedData[3]) / 4;
-                OnResponse(string.Format("{0} {1} {2}", Source, value, base.Unit));
+                OnResponse(string.Format("{0}{1}{2} {3}", Source, Environment.NewLine, value, base.Unit));
             }
         }
     }

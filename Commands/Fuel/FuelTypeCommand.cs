@@ -1,9 +1,10 @@
-﻿using Android.Bluetooth;
-using OBDProject.Utils;
+﻿using System;
 using System.Linq;
 using System.Text;
+using Android.Bluetooth;
+using OBDProject.Utils;
 
-namespace OBDProject.Commands
+namespace OBDProject.Commands.Fuel
 {
     public class FuelTypeCommand : BasicCommand
     {
@@ -17,7 +18,8 @@ namespace OBDProject.Commands
             if (base.ReadedData.Any())
             {
                 var value = (FuelType)base.ReadedData[2];
-                OnResponse(string.Format("{0} {1} {2}", Source, value, base.Unit));
+                OnResponse(string.Format("{0}{1}{2} {3}", Source, Environment.NewLine, value, base.Unit));
+
             }
         }
     }

@@ -1,4 +1,5 @@
 using Android.Bluetooth;
+using System;
 using System.Linq;
 using System.Text;
 
@@ -17,7 +18,7 @@ namespace OBDProject.Commands.Fuel
             {
                 var value = base.ReadedData[2] * 3;
 
-                OnResponse(string.Format("{0} {1} {@}", Source, value, base.Unit));
+                OnResponse(string.Format("{0}{1}{2} {3}", Source, Environment.NewLine, value, base.Unit));
             }
         }
     }

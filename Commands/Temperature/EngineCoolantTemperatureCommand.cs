@@ -1,4 +1,5 @@
 using Android.Bluetooth;
+using System;
 using System.Linq;
 using System.Text;
 
@@ -8,7 +9,7 @@ namespace OBDProject.Commands.Temperature
     {
         public EngineCoolantTemperatureCommand(BluetoothSocket socket, object readFromDeviceLock, int position) : base(Encoding.ASCII.GetBytes("01 05\r"), socket, "°C", readFromDeviceLock, position)
         {
-            Source = "EngineCoolantTemperatureCommand";
+            Source = "Engine Coolant Temperature";
         }
 
         protected override void PrepereFindResult()
@@ -17,7 +18,7 @@ namespace OBDProject.Commands.Temperature
             {
                 var value = base.ReadedData[2] - 40;
 
-                OnResponse(string.Format("{0} {1} {2}", Source, value, base.Unit));
+                OnResponse(string.Format("{0}{1}{2} {3}", Source, Environment.NewLine, value, base.Unit));
             }
         }
     }
