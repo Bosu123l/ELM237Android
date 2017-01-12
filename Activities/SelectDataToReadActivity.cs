@@ -2,16 +2,15 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Widget;
-using System.Collections.Generic;
 using OBDProject.Utils;
+using System.Collections.Generic;
 
 namespace OBDProject.Activities
 {
-    [Activity(Label = "Select data to Read:", Theme = "@style/MyCustomTheme")]
+    [Activity(Label = "Select data to Read:", Theme = "@style/MyCustomTheme", Icon = "@drawable/Auto")]
     public class SelectDataToReadActivity : Activity
     {
         public const string ActivityReturned = "SelectDataToReadActivity";
-
 
         private readonly List<string> _elementsToDisplay = new List<string>()
         {
@@ -46,7 +45,6 @@ namespace OBDProject.Activities
             _listView.ChoiceMode = ChoiceMode.Multiple;
 
             _confirmButton.Click += _confirmButton_Click;
-
 
             ActivityResults.ActivityClosed = "SelectDataToReadActivity";
         }

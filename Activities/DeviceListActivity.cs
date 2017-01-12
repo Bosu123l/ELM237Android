@@ -9,7 +9,7 @@ using System;
 
 namespace OBDProject.Activities
 {
-    [Activity(Label = "Bluethooth Device list:"  ,Theme = "@style/MyCustomTheme")]
+    [Activity(Label = "Bluethooth Device list:",  Icon = "@drawable/Auto", Theme = "@style/MyCustomTheme")]
     public class DeviceListActivity : Activity
     {
         public const string ActivityReturned = "DeviceListActivity";
