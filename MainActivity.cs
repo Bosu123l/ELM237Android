@@ -17,7 +17,7 @@ using Timer = System.Timers.Timer;
 
 namespace OBDProject
 {
-    [Activity(Label = "Android OBDII", MainLauncher = true, Icon = "@drawable/Auto")]
+    [Activity(Label = "Readed data:", Theme = "@style/MyCustomTheme", MainLauncher = true, Icon = "@drawable/Auto")]
     public class MainActivity : Activity
     {
         private LogManager _logManager;
@@ -112,8 +112,8 @@ namespace OBDProject
                             _tempCounterForIndex = 0;
                         }
 
-                        _dataFromSelectedElements[_tempCounterForIndex++] = string.Format("{0}{1}{2}", "otrzymano",
-                            System.Environment.NewLine, _tempCounter++);
+                        _dataFromSelectedElements[_tempCounterForIndex] = string.Format("{0}{1}{2}", "otrzymano",
+                            System.Environment.NewLine, _tempCounter);
                         _logManager.ReadedDataWriteLine(string.Format("{0}{1}{2}", "otrzymano",
                             System.Environment.NewLine, _tempCounter++));
 
@@ -197,7 +197,7 @@ namespace OBDProject
             {
                 case Resource.Id.closeApplication:
                     this.FinishAffinity();
-                 
+
                     return true;
                 case Resource.Id.selectCommand:
                     var selectDataIntent = new Intent(this, typeof(SelectDataToReadActivity));

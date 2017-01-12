@@ -9,14 +9,14 @@
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.INTERNET" />
   <application android:label="OBDProject" android:name="android.app.Application" android:allowBackup="true" android:icon="@drawable/auto" android:debuggable="true">
-    <activity android:icon="@drawable/auto" android:label="Android OBDII" android:name="md523be1778a9acd2d4067abb99011300f7.MainActivity">
+    <activity android:icon="@drawable/auto" android:label="Readed data:" android:theme="@style/MyCustomTheme" android:name="md523be1778a9acd2d4067abb99011300f7.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:label="DeviceListActivity" android:name="md5527116b622bb92aeb73fcf11aa4b89ee.DeviceListActivity" />
-    <activity android:label="SelectDataToReadActivity" android:name="md5527116b622bb92aeb73fcf11aa4b89ee.SelectDataToReadActivity" />
+    <activity android:label="Bluethooth Device list:" android:theme="@style/MyCustomTheme" android:name="md5527116b622bb92aeb73fcf11aa4b89ee.DeviceListActivity" />
+    <activity android:label="Select data to Read:" android:theme="@style/MyCustomTheme" android:name="md5527116b622bb92aeb73fcf11aa4b89ee.SelectDataToReadActivity" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="OBDProject.OBDProject.mono.MonoRuntimeProvider.__mono_init__" />
     <!--suppress ExportedReceiver-->
     <receiver android:name="mono.android.Seppuku">

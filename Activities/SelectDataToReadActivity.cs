@@ -7,7 +7,7 @@ using OBDProject.Utils;
 
 namespace OBDProject.Activities
 {
-    [Activity(Label = "SelectDataToReadActivity")]
+    [Activity(Label = "Select data to Read:", Theme = "@style/MyCustomTheme")]
     public class SelectDataToReadActivity : Activity
     {
         public const string ActivityReturned = "SelectDataToReadActivity";
