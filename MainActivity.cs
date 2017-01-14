@@ -50,6 +50,7 @@ namespace OBDProject
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);
 
+
             _clearButton = FindViewById<Button>(Resource.Id.refreshButton);
             _gridView = FindViewById<GridView>(Resource.Id.ElementyODB);
 
@@ -210,10 +211,14 @@ namespace OBDProject
             _previouseConnectionState = e;
         }
 
+
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
+            base.OnCreateOptionsMenu(menu);
+
             var inflater = MenuInflater;
             inflater.Inflate(Resource.Menu.option_menu, menu);
+
             return true;
         }
 
@@ -221,6 +226,10 @@ namespace OBDProject
         {
             switch (item.ItemId)
             {
+                case Resource.Id.TroubleCodes:
+
+
+                    return true;
                 case Resource.Id.closeApplication:
                     this.FinishAffinity();
 

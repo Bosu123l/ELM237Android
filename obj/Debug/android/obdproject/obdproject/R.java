@@ -163,8 +163,9 @@ public final class R {
         public static final int ConfirmButton=0x7f080009;
         public static final int ElementyODB=0x7f080006;
         public static final int SelectDataToReadMultipleChoice=0x7f080008;
+        public static final int TroubleCodes=0x7f08000e;
         public static final int button_scan=0x7f080004;
-        public static final int closeApplication=0x7f08000e;
+        public static final int closeApplication=0x7f08000f;
         public static final int discoverable=0x7f08000d;
         public static final int linearLayout1=0x7f080005;
         public static final int new_devices=0x7f080003;
@@ -190,10 +191,11 @@ public final class R {
     public static final class string {
         public static final int ApplicationName=0x7f050001;
         public static final int Hello=0x7f050000;
+        public static final int TroubleCodes=0x7f050013;
         public static final int app_name=0x7f050002;
         public static final int bt_not_enabled_leaving=0x7f050005;
         public static final int button_scan=0x7f05000f;
-        public static final int closeApplication=0x7f050013;
+        public static final int closeApplication=0x7f050014;
         /**  Options Menu 
          */
         public static final int connect=0x7f050010;

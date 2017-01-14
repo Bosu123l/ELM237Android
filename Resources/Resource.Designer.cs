@@ -514,11 +514,14 @@ namespace OBDProject
 			// aapt resource value: 0x7f080008
 			public const int SelectDataToReadMultipleChoice = 2131230728;
 			
+			// aapt resource value: 0x7f08000e
+			public const int TroubleCodes = 2131230734;
+			
 			// aapt resource value: 0x7f080004
 			public const int button_scan = 2131230724;
 			
-			// aapt resource value: 0x7f08000e
-			public const int closeApplication = 2131230734;
+			// aapt resource value: 0x7f08000f
+			public const int closeApplication = 2131230735;
 			
 			// aapt resource value: 0x7f08000d
 			public const int discoverable = 2131230733;
@@ -616,6 +619,9 @@ namespace OBDProject
 			// aapt resource value: 0x7f050000
 			public const int Hello = 2131034112;
 			
+			// aapt resource value: 0x7f050013
+			public const int TroubleCodes = 2131034131;
+			
 			// aapt resource value: 0x7f050002
 			public const int app_name = 2131034114;
 			
@@ -625,8 +631,8 @@ namespace OBDProject
 			// aapt resource value: 0x7f05000f
 			public const int button_scan = 2131034127;
 			
-			// aapt resource value: 0x7f050013
-			public const int closeApplication = 2131034131;
+			// aapt resource value: 0x7f050014
+			public const int closeApplication = 2131034132;
 			
 			// aapt resource value: 0x7f050010
 			public const int connect = 2131034128;

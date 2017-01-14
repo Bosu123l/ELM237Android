@@ -26,5 +26,6 @@
   <string name="connect">Connect a device</string>
   <string name="enableCommands">Active data</string>
   <string name="discoverable">Make discoverable</string>
+  <string name="TroubleCodes">Trouble Codes</string>
   <string name="closeApplication">Exit</string>
 </resources>

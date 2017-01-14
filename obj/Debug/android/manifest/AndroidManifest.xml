@@ -16,6 +16,7 @@
     </activity>
     <activity android:icon="@drawable/auto" android:label="Bluethooth Device list:" android:theme="@style/MyCustomTheme" android:name="md5527116b622bb92aeb73fcf11aa4b89ee.DeviceListActivity" />
     <activity android:icon="@drawable/auto" android:label="Select data to Read:" android:theme="@style/MyCustomTheme" android:name="md5527116b622bb92aeb73fcf11aa4b89ee.SelectDataToReadActivity" />
+    <activity android:icon="@drawable/auto" android:label="Bluethooth Device list:" android:theme="@style/MyCustomTheme" android:name="md5527116b622bb92aeb73fcf11aa4b89ee.TroubleCodesActivity" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="OBDProject.OBDProject.mono.MonoRuntimeProvider.__mono_init__" />
     <!--suppress ExportedReceiver-->
     <receiver android:name="mono.android.Seppuku">

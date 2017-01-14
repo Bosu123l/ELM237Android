@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Activities\DeviceListActivity.cs" />
     <Compile Include="Activities\SelectDataToReadActivity.cs" />
+    <Compile Include="Activities\TroubleCodesActivity.cs" />
     <Compile Include="Adapters\GridAdaper.cs" />
     <Compile Include="Commands\BasicCommand.cs" />
     <Compile Include="Commands\CarStatus\TroubleCodesCommand.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Utils\FuelType.cs" />
     <Compile Include="Utils\LogManager.cs" />
     <Compile Include="Utils\Receiver.cs" />
+    <Compile Include="Utils\TroubleCodes.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />
