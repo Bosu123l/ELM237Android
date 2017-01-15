@@ -14,9 +14,9 @@ namespace OBDProject.Commands.CarStatus
 
         private string _rawData;
 
-        public TroubleCodesCommand(BluetoothSocket socket, object readFromDeviceLock, int position,
+        public TroubleCodesCommand(BluetoothSocket socket, object readFromDeviceLock,
             LogManager logManager)
-            : base(Encoding.ASCII.GetBytes("03\r"), socket, string.Empty, readFromDeviceLock, position, logManager)
+            : base(Encoding.ASCII.GetBytes("03\r"), socket, string.Empty, readFromDeviceLock, 0, logManager)
         {
             Source = string.Empty;
         }

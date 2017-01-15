@@ -131,5 +131,6 @@ C:\Users\lukas\Source\Repos\ELM237Android\obj\Debug\android\assets\System.Servic
 C:\Users\lukas\Source\Repos\ELM237Android\obj\Debug\android\assets\System.Xml.dll.mdb
 C:\Users\lukas\Source\Repos\ELM237Android\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
 C:\Users\lukas\Source\Repos\ELM237Android\obj\Debug\OBDProject.csprojResolveAssemblyReference.cache
+C:\Users\lukas\Source\Repos\ELM237Android\obj\Debug\res\layout\troublecodesview.xml
 C:\Users\lukas\Source\Repos\ELM237Android\obj\Debug\OBDProject.dll.mdb
 C:\Users\lukas\Source\Repos\ELM237Android\bin\Debug\OBDProject.dll.mdb

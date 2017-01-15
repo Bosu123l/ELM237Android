@@ -511,20 +511,26 @@ namespace OBDProject
 			// aapt resource value: 0x7f080006
 			public const int ElementyODB = 2131230726;
 			
+			// aapt resource value: 0x7f08000c
+			public const int RemoveFaultsButton = 2131230732;
+			
 			// aapt resource value: 0x7f080008
 			public const int SelectDataToReadMultipleChoice = 2131230728;
 			
-			// aapt resource value: 0x7f08000e
-			public const int TroubleCodes = 2131230734;
+			// aapt resource value: 0x7f080010
+			public const int TroubleCodes = 2131230736;
+			
+			// aapt resource value: 0x7f08000b
+			public const int TroubleList = 2131230731;
 			
 			// aapt resource value: 0x7f080004
 			public const int button_scan = 2131230724;
 			
-			// aapt resource value: 0x7f08000f
-			public const int closeApplication = 2131230735;
+			// aapt resource value: 0x7f080011
+			public const int closeApplication = 2131230737;
 			
-			// aapt resource value: 0x7f08000d
-			public const int discoverable = 2131230733;
+			// aapt resource value: 0x7f08000f
+			public const int discoverable = 2131230735;
 			
 			// aapt resource value: 0x7f080005
 			public const int linearLayout1 = 2131230725;
@@ -541,11 +547,11 @@ namespace OBDProject
 			// aapt resource value: 0x7f08000a
 			public const int rowTextView = 2131230730;
 			
-			// aapt resource value: 0x7f08000b
-			public const int scan = 2131230731;
+			// aapt resource value: 0x7f08000d
+			public const int scan = 2131230733;
 			
-			// aapt resource value: 0x7f08000c
-			public const int selectCommand = 2131230732;
+			// aapt resource value: 0x7f08000e
+			public const int selectCommand = 2131230734;
 			
 			// aapt resource value: 0x7f080002
 			public const int title_new_devices = 2131230722;
@@ -582,7 +588,10 @@ namespace OBDProject
 			public const int TextViewRow = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int WrapPanel = 2130903045;
+			public const int TroubleCodesView = 2130903045;
+			
+			// aapt resource value: 0x7f030006
+			public const int WrapPanel = 2130903046;
 			
 			static Layout()
 			{

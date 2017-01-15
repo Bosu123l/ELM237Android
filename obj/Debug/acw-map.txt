@@ -1,3 +1,7 @@
+OBDProject.Bootstrap, OBDProject;md523be1778a9acd2d4067abb99011300f7.Bootstrap
+OBDProject.Bootstrap, OBDProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md523be1778a9acd2d4067abb99011300f7.Bootstrap
+OBDProject.Bootstrap;md523be1778a9acd2d4067abb99011300f7.Bootstrap
+obdproject.Bootstrap;md523be1778a9acd2d4067abb99011300f7.Bootstrap
 OBDProject.MainActivity, OBDProject;md523be1778a9acd2d4067abb99011300f7.MainActivity
 OBDProject.MainActivity, OBDProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md523be1778a9acd2d4067abb99011300f7.MainActivity
 OBDProject.MainActivity;md523be1778a9acd2d4067abb99011300f7.MainActivity

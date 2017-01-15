@@ -35,6 +35,8 @@ namespace OBDProject.Activities
 
             SetResult(Result.Canceled);
 
+
+         
             _findButton = FindViewById<Button>(Resource.Id.button_scan);
             PairedDevicesArrayAdapter = new ArrayAdapter<string>(this, Resource.Layout.device_name);
             NewDevicesArrayAdapter = new ArrayAdapter<string>(this, Resource.Layout.device_name);

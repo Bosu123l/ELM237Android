@@ -55,7 +55,9 @@
     <Compile Include="Activities\SelectDataToReadActivity.cs" />
     <Compile Include="Activities\TroubleCodesActivity.cs" />
     <Compile Include="Adapters\GridAdaper.cs" />
+    <Compile Include="Bootstrap.cs" />
     <Compile Include="Commands\BasicCommand.cs" />
+    <Compile Include="Commands\CarStatus\ClearTroubleCodesCommand.cs" />
     <Compile Include="Commands\CarStatus\TroubleCodesCommand.cs" />
     <Compile Include="Commands\Fuel\ConsuptionFuelRateCommand.cs" />
     <Compile Include="Commands\Fuel\FuelPressureCommand.cs" />
@@ -89,6 +91,7 @@
     <AndroidResource Include="Resources\layout\WrapPanel.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\TroubleCodesView.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
@@ -102,7 +105,9 @@
     <AndroidResource Include="Resources\drawable\Icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Properties\AndroidManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\menu\option_menu.xml" />

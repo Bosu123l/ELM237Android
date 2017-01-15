@@ -34,11 +34,15 @@ namespace OBDProject.Commands
         protected string Unit;
         protected string Source;
         protected readonly BluetoothSocket _socket;
-        private readonly byte[] _command;
+        protected readonly byte[] _command;
         protected LogManager LogManager;
 
         public event EventHandler<string> Response;
 
+        protected BasicCommand(byte[] command, BluetoothSocket socket, object readFromDeviceLock, LogManager logManager) : this(command, socket, string.Empty, readFromDeviceLock, 0, logManager)
+        {
+
+        }
         protected BasicCommand(byte[] command, BluetoothSocket socket, string unit, object readFromDeviceLock, int position, LogManager logManager)
         {
             if (logManager == null)
@@ -54,10 +58,7 @@ namespace OBDProject.Commands
             {
                 throw new ArgumentNullException("Socket Cannot be null!");
             }
-            if (string.IsNullOrEmpty(unit))
-            {
-                throw new ArgumentNullException("Unit Cannot be empty!");
-            }
+
             _command = command;
             _socket = socket;
             ReadyData = string.Empty;

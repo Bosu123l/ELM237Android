@@ -6,6 +6,7 @@ using Android.Views;
 using Android.Widget;
 using OBDProject.Activities;
 using OBDProject.Commands;
+using OBDProject.Commands.CarStatus;
 using OBDProject.Commands.Fuel;
 using OBDProject.Commands.Temperature;
 using OBDProject.Utils;
@@ -17,7 +18,7 @@ using Timer = System.Timers.Timer;
 
 namespace OBDProject
 {
-    [Activity(Label = "Readed data:", Theme = "@style/MyCustomTheme", MainLauncher = true, Icon = "@drawable/Auto")]
+    [Activity(Label = "OBDProject", Theme = "@style/MyCustomTheme", MainLauncher = true, Icon = "@drawable/Auto")]
     public class MainActivity : Activity
     {
         private LogManager _logManager;
@@ -38,6 +39,7 @@ namespace OBDProject
 
         #region Commands
 
+        private TroubleCodesCommand _troubleCodesCommand;
         private List<BasicCommand> _basicCommands;
 
         #endregion Commands
@@ -45,24 +47,30 @@ namespace OBDProject
         private int _tempCounter;
         private int _tempCounterForIndex;
 
+        private ProgressDialog _progress;
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);
 
-
             _clearButton = FindViewById<Button>(Resource.Id.refreshButton);
             _gridView = FindViewById<GridView>(Resource.Id.ElementyODB);
 
-            _bluetoothManager = new BluetoothManager();
+            var bootstrap = Application as Bootstrap;
+            if (bootstrap != null)
+            {
+                _bluetoothManager = bootstrap.BluetoothManager;
+                _readFromDeviceLock = bootstrap.ReadFromDeviceLock;
+                _logManager = bootstrap.LogManager;
+            }
+
+            _bluetoothManager.Connected -= _bluetoothManager_Connected;
             _bluetoothManager.Connected += _bluetoothManager_Connected;
+
             _timer = new Timer(_interval);
             _timer.Stop();
             _timer.Elapsed += _timer_Elapsed;
-
-            _readFromDeviceLock = new object();
-
-            _logManager = new LogManager();
 
             _dataFromSelectedElements = new List<string>();
 
@@ -73,6 +81,8 @@ namespace OBDProject
             _gridView.NumColumns = 2;
 
             _clearButton.Click += _clearButton_Click;
+
+            _progress = new ProgressDialog(this);
 
             _basicCommands = new List<BasicCommand>();
         }
@@ -108,7 +118,7 @@ namespace OBDProject
                             _dataFromSelectedElements[index] = e;
                             if (e.Contains("Speed"))
                             {
-                                showNotifaction(e);
+                                ShowNotifaction(e);
                             }
                         }
                         if (_tempCounterForIndex >= _indexesOfSelectedElements.Count)
@@ -122,7 +132,6 @@ namespace OBDProject
                         //    System.Environment.NewLine, _tempCounter));
                         //showNotifaction(string.Format("{0}{1}{2}", "otrzymano",
                         //    System.Environment.NewLine, _tempCounter));
-
                     }
                     else
                     {
@@ -135,7 +144,7 @@ namespace OBDProject
                 });
         }
 
-        private void showNotifaction(string data)
+        private void ShowNotifaction(string data)
         {
             // Instantiate the builder and set notification elements:
             Notification.Builder builder = new Notification.Builder(this)
@@ -152,7 +161,7 @@ namespace OBDProject
 
             // Publish the notification:
             const int notificationId = 0;
-            notificationManager.Notify(notificationId, notification);
+            if (notificationManager != null) notificationManager.Notify(notificationId, notification);
         }
 
         private void _clearButton_Click(object sender, System.EventArgs e)
@@ -211,7 +220,6 @@ namespace OBDProject
             _previouseConnectionState = e;
         }
 
-
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
             base.OnCreateOptionsMenu(menu);
@@ -227,9 +235,10 @@ namespace OBDProject
             switch (item.ItemId)
             {
                 case Resource.Id.TroubleCodes:
-
-
+                    var troubleCodesIntent = new Intent(this, typeof(TroubleCodesActivity));
+                    StartActivityForResult(troubleCodesIntent, 1);
                     return true;
+
                 case Resource.Id.closeApplication:
                     this.FinishAffinity();
 
@@ -256,6 +265,21 @@ namespace OBDProject
             }
         }
 
+        private void ShowProgressBar(string dialogMessage, string toastMessage)
+        {
+            _progress.Indeterminate = true;
+            _progress.SetProgressStyle(ProgressDialogStyle.Spinner);
+            _progress.SetMessage(dialogMessage);
+            _progress.SetCancelable(false);
+
+            RunOnUiThread(() =>
+            {
+                _progress.Show();
+                RunOnUiThread(() => Toast.MakeText(this, toastMessage, ToastLength.Long).Show());
+            });
+        }
+
+     
         private void ClearCommandCollection()
         {
             _dataFromSelectedElements.Clear();

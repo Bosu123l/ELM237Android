@@ -162,17 +162,20 @@ public final class R {
     public static final class id {
         public static final int ConfirmButton=0x7f080009;
         public static final int ElementyODB=0x7f080006;
+        public static final int RemoveFaultsButton=0x7f08000c;
         public static final int SelectDataToReadMultipleChoice=0x7f080008;
+        public static final int TroubleCodes=0x7f080010;
+        public static final int TroubleList=0x7f08000b;
         public static final int button_scan=0x7f080004;
-        public static final int closeApplication=0x7f08000e;
-        public static final int discoverable=0x7f08000d;
+        public static final int closeApplication=0x7f080011;
+        public static final int discoverable=0x7f08000f;
         public static final int linearLayout1=0x7f080005;
         public static final int new_devices=0x7f080003;
         public static final int paired_devices=0x7f080001;
         public static final int refreshButton=0x7f080007;
         public static final int rowTextView=0x7f08000a;
-        public static final int scan=0x7f08000b;
-        public static final int selectCommand=0x7f08000c;
+        public static final int scan=0x7f08000d;
+        public static final int selectCommand=0x7f08000e;
         public static final int title_new_devices=0x7f080002;
         public static final int title_paired_devices=0x7f080000;
     }
@@ -182,7 +185,8 @@ public final class R {
         public static final int main=0x7f030002;
         public static final int selectdatatoreadview=0x7f030003;
         public static final int textviewrow=0x7f030004;
-        public static final int wrappanel=0x7f030005;
+        public static final int troublecodesview=0x7f030005;
+        public static final int wrappanel=0x7f030006;
     }
     public static final class menu {
         public static final int option_menu=0x7f070000;

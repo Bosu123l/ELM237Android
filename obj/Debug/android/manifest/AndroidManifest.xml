@@ -7,8 +7,8 @@
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.INTERNET" />
-  <application android:label="OBDProject" android:name="android.app.Application" android:allowBackup="true" android:icon="@drawable/auto" android:debuggable="true">
-    <activity android:icon="@drawable/auto" android:label="Readed data:" android:theme="@style/MyCustomTheme" android:name="md523be1778a9acd2d4067abb99011300f7.MainActivity">
+  <application android:label="OBDProject" android:name="md523be1778a9acd2d4067abb99011300f7.Bootstrap" android:allowBackup="true" android:icon="@drawable/auto" android:debuggable="true">
+    <activity android:icon="@drawable/auto" android:label="OBDProject" android:theme="@style/MyCustomTheme" android:name="md523be1778a9acd2d4067abb99011300f7.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
