@@ -32,7 +32,11 @@ namespace OBDProject.Commands
 
         protected List<int> ReadedData;
         protected string Unit;
-        protected string Source;
+
+        public string Source
+        {
+            get; protected set;
+        }
         protected readonly BluetoothSocket _socket;
         protected readonly byte[] _command;
         protected LogManager LogManager;

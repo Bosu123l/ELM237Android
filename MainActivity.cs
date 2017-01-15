@@ -23,7 +23,7 @@ namespace OBDProject
     {
         private LogManager _logManager;
 
-        private const double _interval = 500;
+        private const double _interval = 100;
         private object _readFromDeviceLock;
         private BluetoothManager _bluetoothManager;
         private string _address;
@@ -48,6 +48,7 @@ namespace OBDProject
         private int _tempCounterForIndex;
 
         private ProgressDialog _progress;
+        private List<string> _sourceNames = new List<string>();
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -109,12 +110,16 @@ namespace OBDProject
             _logManager.ReadedDataWriteLine(e);
             RunOnUiThread(() =>
                 {
-                    if (_dataFromSelectedElements.Count >= _indexesOfSelectedElements.Count)
+                    if (_dataFromSelectedElements.Count <= _indexesOfSelectedElements.Count && _dataFromSelectedElements.Count>0)
                     {
                         var tempBasicCommand = sender as BasicCommand;
                         if (tempBasicCommand != null)
                         {
                             int index = tempBasicCommand.Position;
+                            if (index >= _dataFromSelectedElements.Count)
+                            {
+                                return;
+                            }
                             _dataFromSelectedElements[index] = e;
                             if (e.Contains("Speed"))
                             {
@@ -135,7 +140,18 @@ namespace OBDProject
                     }
                     else
                     {
-                        _dataFromSelectedElements.Add(e);
+                     
+                            var temp=e.Split('\n');
+                        if (temp.Length > 0)
+                        {
+                            if (!_dataFromSelectedElements.Any(x => x.Contains(temp[0])))
+                            {
+                                _dataFromSelectedElements.Add(e);
+                            }
+                        }
+                            
+                        
+
                         // _dataFromSelectedElements.Add("początek");
                     }
                     _arrayAdapter.Clear();
@@ -167,6 +183,8 @@ namespace OBDProject
         private void _clearButton_Click(object sender, System.EventArgs e)
         {
             _arrayAdapter.Clear();
+            _sourceNames.Clear();
+            _dataFromSelectedElements.Clear();
             //_command_Response(this, nameof(_arrayAdapter));
         }
 
@@ -235,6 +253,10 @@ namespace OBDProject
             switch (item.ItemId)
             {
                 case Resource.Id.TroubleCodes:
+                    if (_timer.Enabled)
+                    {
+                        _timer.Start();
+                    }
                     var troubleCodesIntent = new Intent(this, typeof(TroubleCodesActivity));
                     StartActivityForResult(troubleCodesIntent, 1);
                     return true;
@@ -279,7 +301,6 @@ namespace OBDProject
             });
         }
 
-     
         private void ClearCommandCollection()
         {
             _dataFromSelectedElements.Clear();
@@ -326,6 +347,7 @@ namespace OBDProject
                             foreach (var basicCommand in _basicCommands)
                             {
                                 basicCommand.Response += _command_Response;
+                                _sourceNames.Add(basicCommand.Source);
                             }
 
                             break;

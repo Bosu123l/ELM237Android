@@ -10,7 +10,7 @@ namespace OBDProject.Commands.Fuel
     {
         public FuelPressureCommand(BluetoothSocket socket, object readFromDeviceLock, int position, LogManager logManager) : base(Encoding.ASCII.GetBytes("01 0A\r"), socket, "kPa", readFromDeviceLock, position, logManager)
         {
-            Source = "FuelPressureCommand";
+            Source = "Fuel Pressure";
         }
 
         protected override void PrepereFindResult()

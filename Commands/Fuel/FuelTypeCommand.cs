@@ -10,7 +10,7 @@ namespace OBDProject.Commands.Fuel
     {
         public FuelTypeCommand(BluetoothSocket socket, object readFromDeviceLock, int position, LogManager logManager) : base(Encoding.ASCII.GetBytes("01 51\r"), socket, " ", readFromDeviceLock, position, logManager)
         {
-            Source = "FuelTypeCommand";
+            Source = "Fuel Type";
         }
 
         protected override void PrepereFindResult()
