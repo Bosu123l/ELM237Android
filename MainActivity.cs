@@ -66,6 +66,10 @@ namespace OBDProject
                 _logManager = bootstrap.LogManager;
             }
 
+            ActionBar.SetLogo(Resource.Drawable.noConnection);
+            ActionBar.SetDisplayUseLogoEnabled(true);
+            ActionBar.Show();
+
             _bluetoothManager.Connected -= _bluetoothManager_Connected;
             _bluetoothManager.Connected += _bluetoothManager_Connected;
 
@@ -86,6 +90,8 @@ namespace OBDProject
             _progress = new ProgressDialog(this);
 
             _basicCommands = new List<BasicCommand>();
+
+            ShowNotifaction("No connection with device.", Resource.Drawable.noConnection);
         }
 
         protected override void OnDestroy()
@@ -109,64 +115,51 @@ namespace OBDProject
 
             _logManager.ReadedDataWriteLine(e);
             RunOnUiThread(() =>
+            {
+                var temp = e.Split(new[] { System.Environment.NewLine }, StringSplitOptions.None);
+                if (temp.Length > 0)
                 {
-                    if (_dataFromSelectedElements.Count <= _indexesOfSelectedElements.Count && _dataFromSelectedElements.Count>0)
+                    if (!_dataFromSelectedElements.Any(x => x.Contains(temp.First())))
                     {
-                        var tempBasicCommand = sender as BasicCommand;
-                        if (tempBasicCommand != null)
-                        {
-                            int index = tempBasicCommand.Position;
-                            if (index >= _dataFromSelectedElements.Count)
-                            {
-                                return;
-                            }
-                            _dataFromSelectedElements[index] = e;
-                            if (e.Contains("Speed"))
-                            {
-                                ShowNotifaction(e);
-                            }
-                        }
-                        if (_tempCounterForIndex >= _indexesOfSelectedElements.Count)
-                        {
-                            _tempCounterForIndex = 0;
-                        }
-
-                        //_dataFromSelectedElements[_tempCounterForIndex++] = string.Format("{0}{1}{2}", "otrzymano",
-                        //    System.Environment.NewLine, _tempCounter++);
-                        //LogManager.ReadedDataWriteLine(string.Format("{0}{1}{2}", "otrzymano",
-                        //    System.Environment.NewLine, _tempCounter));
-                        //showNotifaction(string.Format("{0}{1}{2}", "otrzymano",
-                        //    System.Environment.NewLine, _tempCounter));
+                        _dataFromSelectedElements.Add(e);
+                        UpdateList();
+                        return;
                     }
-                    else
+                }
+
+                var tempBasicCommand = sender as BasicCommand;
+                if (tempBasicCommand != null)
+                {
+                    int index = tempBasicCommand.Position;
+                    if (index >= _dataFromSelectedElements.Count)
                     {
-                     
-                            var temp=e.Split('\n');
-                        if (temp.Length > 0)
-                        {
-                            if (!_dataFromSelectedElements.Any(x => x.Contains(temp[0])))
-                            {
-                                _dataFromSelectedElements.Add(e);
-                            }
-                        }
-                            
-                        
-
-                        // _dataFromSelectedElements.Add("początek");
+                        return;
                     }
-                    _arrayAdapter.Clear();
-                    _arrayAdapter.AddAll(_dataFromSelectedElements);
-                    _arrayAdapter.NotifyDataSetChanged();
-                });
+                    _dataFromSelectedElements[index] = e;
+                }
+                if (_tempCounterForIndex >= _indexesOfSelectedElements.Count)
+                {
+                    _tempCounterForIndex = 0;
+                }
+
+                UpdateList();
+            });
         }
 
-        private void ShowNotifaction(string data)
+        private void UpdateList()
+        {
+            _arrayAdapter.Clear();
+            _arrayAdapter.AddAll(_dataFromSelectedElements);
+            _arrayAdapter.NotifyDataSetChanged();
+        }
+
+        private void ShowNotifaction(string data, int iconId)
         {
             // Instantiate the builder and set notification elements:
             Notification.Builder builder = new Notification.Builder(this)
-                .SetContentTitle("Sample Notification")
+                .SetContentTitle("Connection Status")
                 .SetContentText(data)
-                .SetSmallIcon(Resource.Drawable.Auto);
+                .SetSmallIcon(iconId);
 
             // Build the notification:
             Notification notification = builder.Build();
@@ -182,10 +175,17 @@ namespace OBDProject
 
         private void _clearButton_Click(object sender, System.EventArgs e)
         {
+            if (_basicCommands.Count == 0)
+            {
+                AddSelectedElements();
+            }
+
+            //var rand = new Random();
+            //_command_Response(this, string.Format("{0} {1} {2} {3}", _basicCommands[rand.Next(0, _indexesOfSelectedElements.Count)].Source, System.Environment.NewLine, "test",_tempCounterForIndex++));
+
             _arrayAdapter.Clear();
             _sourceNames.Clear();
             _dataFromSelectedElements.Clear();
-            //_command_Response(this, nameof(_arrayAdapter));
         }
 
         private void _timer_Elapsed(object sender, ElapsedEventArgs e)
@@ -338,8 +338,9 @@ namespace OBDProject
                                 return;
                             }
                             _address = data.Extras.GetString(ActivityResults.AddressOfSelectedDevice);
-
                             _bluetoothManager.Connect(_address);
+
+                            ShowNotifaction(string.Format("Connected with {0}", data.Extras.GetString(ActivityResults.DeviceName)), Resource.Drawable.Connection);
 
                             ClearCommandCollection();
                             AddSelectedElements();

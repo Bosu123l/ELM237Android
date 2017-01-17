@@ -17,11 +17,13 @@ namespace OBDProject.Commands
 
         protected override void PrepereFindResult()
         {
+            string value = NoData;
             if (base.ReadedData.Any())
             {
-                var value = (base.ReadedData[2] * 256f + base.ReadedData[3]) / 4;
-                OnResponse(string.Format("{0}{1}{2} {3}", Source, Environment.NewLine, value, base.Unit));
+                value = ((base.ReadedData[2] * 256f + base.ReadedData[3]) / 4).ToString();
             }
+
+            OnResponse(string.Format("{0}{1}{2} {3}", Source, Environment.NewLine, value, base.Unit));
         }
     }
 }

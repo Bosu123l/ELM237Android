@@ -6,5 +6,6 @@
         public static string SelectedData;
         public static string AddressOfSelectedDevice= "AddressOfSelectedDevice";
         public static string TroubleCollection = "TroubleCollection";
+        public static string DeviceName = "DeviceName";
     }
 }

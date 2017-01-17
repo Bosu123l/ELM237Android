@@ -4,7 +4,7 @@ using System.Security.Permissions;
 
 namespace OBDProject.Utils
 {
-    [FileIOPermission(SecurityAction.PermitOnly)]
+
     public class LogManager : IDisposable
     {
         public string Log
@@ -56,8 +56,18 @@ namespace OBDProject.Utils
             }
             catch (Exception e)
             {
-                System.IO.Directory.CreateDirectory(path);
-                File.WriteAllText(filename, Log);
+                try
+                {
+                    System.IO.Directory.CreateDirectory(path);
+
+                    File.WriteAllText(filename, Log);
+                }
+                catch (Exception exception)
+                {
+                    Console.WriteLine(exception);
+                    throw;
+                }
+
             }
         }
 

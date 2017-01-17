@@ -2,7 +2,7 @@
 <xs:schema xmlns:android="http://schemas.android.com/apk/res/android" attributeFormDefault="qualified" elementFormDefault="unqualified" targetNamespace="http://schemas.android.com/apk/res/android" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v23</xs:documentation>
-    <xs:documentation>12.01.2017 13:17:30</xs:documentation>
+    <xs:documentation>17.01.2017 20:08:20</xs:documentation>
   </xs:annotation>
   <xs:attribute name="accessibilityLiveRegion">
     <xs:annotation>
@@ -1203,7 +1203,9 @@
             <xs:enumeration value="@color/Yellow" />
             <xs:enumeration value="@color/YellowGreen" />
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -1979,7 +1981,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -3080,7 +3084,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -3728,7 +3734,9 @@
             <xs:enumeration value="@color/Yellow" />
             <xs:enumeration value="@color/YellowGreen" />
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -4041,7 +4049,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -4807,7 +4817,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -5061,6 +5073,7 @@
             <xs:enumeration value="@string/title_not_connected" />
             <xs:enumeration value="@string/title_other_devices" />
             <xs:enumeration value="@string/title_paired_devices" />
+            <xs:enumeration value="@string/TroubleCodes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -5120,6 +5133,7 @@
             <xs:enumeration value="@string/title_not_connected" />
             <xs:enumeration value="@string/title_other_devices" />
             <xs:enumeration value="@string/title_paired_devices" />
+            <xs:enumeration value="@string/TroubleCodes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -5160,7 +5174,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -5493,7 +5509,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -5747,6 +5765,7 @@
             <xs:enumeration value="@string/title_not_connected" />
             <xs:enumeration value="@string/title_other_devices" />
             <xs:enumeration value="@string/title_paired_devices" />
+            <xs:enumeration value="@string/TroubleCodes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -5787,7 +5806,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -6040,7 +6061,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -6294,6 +6317,7 @@
             <xs:enumeration value="@string/title_not_connected" />
             <xs:enumeration value="@string/title_other_devices" />
             <xs:enumeration value="@string/title_paired_devices" />
+            <xs:enumeration value="@string/TroubleCodes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -6629,7 +6653,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -7332,7 +7358,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -7820,6 +7848,7 @@
             <xs:enumeration value="@string/title_not_connected" />
             <xs:enumeration value="@string/title_other_devices" />
             <xs:enumeration value="@string/title_paired_devices" />
+            <xs:enumeration value="@string/TroubleCodes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -7876,7 +7905,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -8130,6 +8161,7 @@
             <xs:enumeration value="@string/title_not_connected" />
             <xs:enumeration value="@string/title_other_devices" />
             <xs:enumeration value="@string/title_paired_devices" />
+            <xs:enumeration value="@string/TroubleCodes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -8475,7 +8507,9 @@
             <xs:enumeration value="@color/Yellow" />
             <xs:enumeration value="@color/YellowGreen" />
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -8931,7 +8965,9 @@
             <xs:enumeration value="@color/Yellow" />
             <xs:enumeration value="@color/YellowGreen" />
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -9387,7 +9423,9 @@
             <xs:enumeration value="@color/Yellow" />
             <xs:enumeration value="@color/YellowGreen" />
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -9883,7 +9921,9 @@
             <xs:enumeration value="@color/Yellow" />
             <xs:enumeration value="@color/YellowGreen" />
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -10339,7 +10379,9 @@
             <xs:enumeration value="@color/Yellow" />
             <xs:enumeration value="@color/YellowGreen" />
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -11048,7 +11090,9 @@
             <xs:enumeration value="@color/Yellow" />
             <xs:enumeration value="@color/YellowGreen" />
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -11417,7 +11461,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -11837,7 +11883,9 @@
             <xs:enumeration value="@color/Yellow" />
             <xs:enumeration value="@color/YellowGreen" />
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -12272,7 +12320,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -12681,7 +12731,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -13208,7 +13260,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -13816,7 +13870,9 @@
             <xs:enumeration value="@color/Yellow" />
             <xs:enumeration value="@color/YellowGreen" />
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -14148,6 +14204,7 @@
             <xs:enumeration value="@string/title_not_connected" />
             <xs:enumeration value="@string/title_other_devices" />
             <xs:enumeration value="@string/title_paired_devices" />
+            <xs:enumeration value="@string/TroubleCodes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -14207,6 +14264,7 @@
             <xs:enumeration value="@string/title_not_connected" />
             <xs:enumeration value="@string/title_other_devices" />
             <xs:enumeration value="@string/title_paired_devices" />
+            <xs:enumeration value="@string/TroubleCodes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -14430,7 +14488,9 @@
             <xs:enumeration value="@color/Yellow" />
             <xs:enumeration value="@color/YellowGreen" />
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -15080,6 +15140,7 @@
             <xs:enumeration value="@string/title_not_connected" />
             <xs:enumeration value="@string/title_other_devices" />
             <xs:enumeration value="@string/title_paired_devices" />
+            <xs:enumeration value="@string/TroubleCodes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -15139,6 +15200,7 @@
             <xs:enumeration value="@string/title_not_connected" />
             <xs:enumeration value="@string/title_other_devices" />
             <xs:enumeration value="@string/title_paired_devices" />
+            <xs:enumeration value="@string/TroubleCodes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -15198,6 +15260,7 @@
             <xs:enumeration value="@string/title_not_connected" />
             <xs:enumeration value="@string/title_other_devices" />
             <xs:enumeration value="@string/title_paired_devices" />
+            <xs:enumeration value="@string/TroubleCodes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -15238,7 +15301,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -15473,7 +15538,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -15708,7 +15775,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -15943,7 +16012,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -16178,7 +16249,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -16413,7 +16486,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -16648,7 +16723,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -16883,7 +16960,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -17455,7 +17534,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -17717,7 +17798,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -17952,7 +18035,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -18187,7 +18272,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -18422,7 +18509,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -18697,7 +18786,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -19075,7 +19166,9 @@
             <xs:enumeration value="@color/Yellow" />
             <xs:enumeration value="@color/YellowGreen" />
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -19388,7 +19481,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -19663,7 +19758,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -20132,7 +20229,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -20367,7 +20466,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -20701,6 +20802,7 @@
             <xs:enumeration value="@string/title_not_connected" />
             <xs:enumeration value="@string/title_other_devices" />
             <xs:enumeration value="@string/title_paired_devices" />
+            <xs:enumeration value="@string/TroubleCodes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -20847,12 +20949,15 @@
             <xs:enumeration value="@id/new_devices" />
             <xs:enumeration value="@id/paired_devices" />
             <xs:enumeration value="@id/refreshButton" />
+            <xs:enumeration value="@id/RemoveFaultsButton" />
             <xs:enumeration value="@id/rowTextView" />
             <xs:enumeration value="@id/scan" />
             <xs:enumeration value="@id/selectCommand" />
             <xs:enumeration value="@id/SelectDataToReadMultipleChoice" />
             <xs:enumeration value="@id/title_new_devices" />
             <xs:enumeration value="@id/title_paired_devices" />
+            <xs:enumeration value="@id/TroubleCodes" />
+            <xs:enumeration value="@id/TroubleList" />
             <xs:enumeration value="@android:id/accessibilityActionContextClick" />
             <xs:enumeration value="@android:id/accessibilityActionScrollDown" />
             <xs:enumeration value="@android:id/accessibilityActionScrollLeft" />
@@ -20928,7 +21033,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -21200,6 +21307,7 @@
             <xs:enumeration value="@string/title_not_connected" />
             <xs:enumeration value="@string/title_other_devices" />
             <xs:enumeration value="@string/title_paired_devices" />
+            <xs:enumeration value="@string/TroubleCodes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -21291,7 +21399,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -21621,7 +21731,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -22327,7 +22439,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -22581,6 +22695,7 @@
             <xs:enumeration value="@string/title_not_connected" />
             <xs:enumeration value="@string/title_other_devices" />
             <xs:enumeration value="@string/title_paired_devices" />
+            <xs:enumeration value="@string/TroubleCodes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -22666,7 +22781,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -23061,7 +23178,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -23416,7 +23535,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -23667,7 +23788,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -24363,7 +24486,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -24863,7 +24988,9 @@
             <xs:enumeration value="@color/Yellow" />
             <xs:enumeration value="@color/YellowGreen" />
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -25207,6 +25334,7 @@
             <xs:enumeration value="@string/title_not_connected" />
             <xs:enumeration value="@string/title_other_devices" />
             <xs:enumeration value="@string/title_paired_devices" />
+            <xs:enumeration value="@string/TroubleCodes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -25423,6 +25551,7 @@
             <xs:enumeration value="@string/title_not_connected" />
             <xs:enumeration value="@string/title_other_devices" />
             <xs:enumeration value="@string/title_paired_devices" />
+            <xs:enumeration value="@string/TroubleCodes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -25696,6 +25825,7 @@
             <xs:enumeration value="@string/title_not_connected" />
             <xs:enumeration value="@string/title_other_devices" />
             <xs:enumeration value="@string/title_paired_devices" />
+            <xs:enumeration value="@string/TroubleCodes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -25908,7 +26038,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -26155,7 +26287,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -26409,6 +26543,7 @@
             <xs:enumeration value="@string/title_not_connected" />
             <xs:enumeration value="@string/title_other_devices" />
             <xs:enumeration value="@string/title_paired_devices" />
+            <xs:enumeration value="@string/TroubleCodes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -26449,7 +26584,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -26724,7 +26861,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -26959,7 +27098,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -27194,7 +27335,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -27429,7 +27572,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -27664,7 +27809,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -28907,6 +29054,7 @@
             <xs:enumeration value="@string/title_not_connected" />
             <xs:enumeration value="@string/title_other_devices" />
             <xs:enumeration value="@string/title_paired_devices" />
+            <xs:enumeration value="@string/TroubleCodes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -28962,7 +29110,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -29357,7 +29507,9 @@
             <xs:enumeration value="@color/Yellow" />
             <xs:enumeration value="@color/YellowGreen" />
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -29813,7 +29965,9 @@
             <xs:enumeration value="@color/Yellow" />
             <xs:enumeration value="@color/YellowGreen" />
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -30662,7 +30816,9 @@
             <xs:enumeration value="@color/Yellow" />
             <xs:enumeration value="@color/YellowGreen" />
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -31015,7 +31171,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -31281,6 +31439,7 @@
             <xs:enumeration value="@string/title_not_connected" />
             <xs:enumeration value="@string/title_other_devices" />
             <xs:enumeration value="@string/title_paired_devices" />
+            <xs:enumeration value="@string/TroubleCodes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -31592,7 +31751,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -32080,7 +32241,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -32315,7 +32478,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -32569,6 +32734,7 @@
             <xs:enumeration value="@string/title_not_connected" />
             <xs:enumeration value="@string/title_other_devices" />
             <xs:enumeration value="@string/title_paired_devices" />
+            <xs:enumeration value="@string/TroubleCodes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -33255,7 +33421,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -33490,7 +33658,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -33725,7 +33895,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -33960,7 +34132,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -34375,7 +34549,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -34610,7 +34786,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -35156,7 +35334,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -35534,7 +35714,9 @@
             <xs:enumeration value="@color/Yellow" />
             <xs:enumeration value="@color/YellowGreen" />
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -35847,7 +36029,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -36566,6 +36750,7 @@
             <xs:enumeration value="@string/title_not_connected" />
             <xs:enumeration value="@string/title_other_devices" />
             <xs:enumeration value="@string/title_paired_devices" />
+            <xs:enumeration value="@string/TroubleCodes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -36829,7 +37014,9 @@
             <xs:enumeration value="@color/Yellow" />
             <xs:enumeration value="@color/YellowGreen" />
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -37500,7 +37687,9 @@
             <xs:enumeration value="@color/Yellow" />
             <xs:enumeration value="@color/YellowGreen" />
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -37871,7 +38060,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -38137,6 +38328,7 @@
             <xs:enumeration value="@string/title_not_connected" />
             <xs:enumeration value="@string/title_other_devices" />
             <xs:enumeration value="@string/title_paired_devices" />
+            <xs:enumeration value="@string/TroubleCodes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -39077,7 +39269,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -39331,6 +39525,7 @@
             <xs:enumeration value="@string/title_not_connected" />
             <xs:enumeration value="@string/title_other_devices" />
             <xs:enumeration value="@string/title_paired_devices" />
+            <xs:enumeration value="@string/TroubleCodes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -39371,7 +39566,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -39840,7 +40037,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -40155,7 +40354,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -40390,7 +40591,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -40665,7 +40868,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -40900,7 +41105,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -41154,6 +41361,7 @@
             <xs:enumeration value="@string/title_not_connected" />
             <xs:enumeration value="@string/title_other_devices" />
             <xs:enumeration value="@string/title_paired_devices" />
+            <xs:enumeration value="@string/TroubleCodes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -41213,6 +41421,7 @@
             <xs:enumeration value="@string/title_not_connected" />
             <xs:enumeration value="@string/title_other_devices" />
             <xs:enumeration value="@string/title_paired_devices" />
+            <xs:enumeration value="@string/TroubleCodes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -41318,7 +41527,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -41696,7 +41907,9 @@
             <xs:enumeration value="@color/Yellow" />
             <xs:enumeration value="@color/YellowGreen" />
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -42152,7 +42365,9 @@
             <xs:enumeration value="@color/Yellow" />
             <xs:enumeration value="@color/YellowGreen" />
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -42608,7 +42823,9 @@
             <xs:enumeration value="@color/Yellow" />
             <xs:enumeration value="@color/YellowGreen" />
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -43064,7 +43281,9 @@
             <xs:enumeration value="@color/Yellow" />
             <xs:enumeration value="@color/YellowGreen" />
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -43377,7 +43596,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -43638,7 +43859,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -43873,7 +44096,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -44108,7 +44333,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -44343,7 +44570,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -44578,7 +44807,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -44912,6 +45143,7 @@
             <xs:enumeration value="@string/title_not_connected" />
             <xs:enumeration value="@string/title_other_devices" />
             <xs:enumeration value="@string/title_paired_devices" />
+            <xs:enumeration value="@string/TroubleCodes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -44971,6 +45203,7 @@
             <xs:enumeration value="@string/title_not_connected" />
             <xs:enumeration value="@string/title_other_devices" />
             <xs:enumeration value="@string/title_paired_devices" />
+            <xs:enumeration value="@string/TroubleCodes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -45023,7 +45256,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -45258,7 +45493,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -45493,7 +45730,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -46667,7 +46906,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -47269,6 +47510,7 @@
             <xs:enumeration value="@string/title_not_connected" />
             <xs:enumeration value="@string/title_other_devices" />
             <xs:enumeration value="@string/title_paired_devices" />
+            <xs:enumeration value="@string/TroubleCodes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -47574,6 +47816,7 @@
             <xs:enumeration value="@string/title_not_connected" />
             <xs:enumeration value="@string/title_other_devices" />
             <xs:enumeration value="@string/title_paired_devices" />
+            <xs:enumeration value="@string/TroubleCodes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -47814,7 +48057,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -48363,7 +48608,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -49006,6 +49253,7 @@
             <xs:enumeration value="@string/title_not_connected" />
             <xs:enumeration value="@string/title_other_devices" />
             <xs:enumeration value="@string/title_paired_devices" />
+            <xs:enumeration value="@string/TroubleCodes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
@@ -49560,7 +49808,9 @@
             <xs:enumeration value="@color/Yellow" />
             <xs:enumeration value="@color/YellowGreen" />
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -50021,7 +50271,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -50272,7 +50524,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -50507,7 +50761,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -50885,7 +51141,9 @@
             <xs:enumeration value="@color/Yellow" />
             <xs:enumeration value="@color/YellowGreen" />
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -51341,7 +51599,9 @@
             <xs:enumeration value="@color/Yellow" />
             <xs:enumeration value="@color/YellowGreen" />
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -51706,7 +51966,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -51941,7 +52203,9 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/auto" />
+            <xs:enumeration value="@drawable/connection" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/noconnection" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />

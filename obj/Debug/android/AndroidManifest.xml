@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="OBDProject.OBDProject" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
-  <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="23" />
   <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED" />
   <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
   <uses-permission android:name="android.permission.BLUETOOTH" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.WRITE_USER_DICTIONARY" />
   <uses-permission android:name="android.permission.INTERNET" />
-  <application android:label="OBDProject" android:name="md523be1778a9acd2d4067abb99011300f7.Bootstrap" android:allowBackup="true" android:icon="@drawable/auto" android:debuggable="true">
+  <application android:name="md523be1778a9acd2d4067abb99011300f7.Bootstrap" android:label="OBDProject" android:icon="@drawable/auto" android:allowBackup="true" android:debuggable="true">
     <activity android:icon="@drawable/auto" android:label="OBDProject" android:theme="@style/MyCustomTheme" android:name="md523be1778a9acd2d4067abb99011300f7.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
@@ -26,4 +27,6 @@
       </intent-filter>
     </receiver>
   </application>
+  <!--suppress UsesMinSdkAttributes-->
+  <uses-sdk android:minSdkVersion="11" />
 </manifest>
