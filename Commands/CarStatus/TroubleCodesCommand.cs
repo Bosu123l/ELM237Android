@@ -51,7 +51,7 @@ namespace OBDProject.Commands.CarStatus
             {
                 while (true)
                 {
-                    a = (byte)_socket.InputStream.ReadByte();
+                    a = (byte)Socket.InputStream.ReadByte();
                     if (a == -1)
                     {
                         break;
@@ -75,7 +75,7 @@ namespace OBDProject.Commands.CarStatus
             }
             finally
             {
-                _socket.InputStream.Flush();
+                Socket.InputStream.Flush();
             }
         }
 

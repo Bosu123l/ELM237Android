@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Android.Bluetooth;
+using OBDProject.Utils;
+using System;
 using System.Linq;
 using System.Text;
-using Android.Bluetooth;
-using OBDProject.Utils;
 
 namespace OBDProject.Commands.Fuel
 {
@@ -15,12 +15,12 @@ namespace OBDProject.Commands.Fuel
 
         protected override void PrepereFindResult()
         {
+            string value = NoData;
             if (base.ReadedData.Any())
             {
-                var value = (FuelType)base.ReadedData[2];
-                OnResponse(string.Format("{0}{1}{2} {3}", Source, Environment.NewLine, value, base.Unit));
-
+                value = ((FuelType)base.ReadedData[2]).ToString();
             }
+            OnResponse(string.Format("{0}{1}{2} {3}", Source, Environment.NewLine, value, base.Unit));
         }
     }
 }

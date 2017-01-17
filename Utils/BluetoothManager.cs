@@ -19,8 +19,13 @@ namespace OBDProject.Utils
 
         public event EventHandler<bool> Connected;
 
+        public string DeviceName { get; set; }
+
+
         private BluetoothAdapter _bluetoothAdapter;
         private BluetoothSocket _socket;
+
+
 
         public BluetoothManager()
         {

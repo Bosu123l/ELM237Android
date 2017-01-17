@@ -6,10 +6,11 @@ using Android.Views;
 using Android.Widget;
 using OBDProject.Utils;
 using System;
+using System.Linq;
 
 namespace OBDProject.Activities
 {
-    [Activity(Label = "Bluethooth Device list:",  Icon = "@drawable/Auto", Theme = "@style/MyCustomTheme")]
+    [Activity(Label = "Bluethooth Device list:", Icon = "@drawable/Auto", Theme = "@style/MyCustomTheme")]
     public class DeviceListActivity : Activity
     {
         public const string ActivityReturned = "DeviceListActivity";
@@ -20,12 +21,18 @@ namespace OBDProject.Activities
         public static ArrayAdapter<string> PairedDevicesArrayAdapter;
         public static ArrayAdapter<string> NewDevicesArrayAdapter;
 
+        public string DeviceName
+        {
+            get; private set;
+        }
+
         private Receiver _receiver;
 
         private BluetoothAdapter _bluetoothAdapter;
         private Button _findButton;
         private bool _connecting;
-
+        private ListView _newDevicesListView;
+        private ListView _pairedListView;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             _connecting = false;
@@ -36,15 +43,16 @@ namespace OBDProject.Activities
             SetResult(Result.Canceled);
 
 
-         
-            _findButton = FindViewById<Button>(Resource.Id.button_scan);
-            PairedDevicesArrayAdapter = new ArrayAdapter<string>(this, Resource.Layout.device_name);
-            NewDevicesArrayAdapter = new ArrayAdapter<string>(this, Resource.Layout.device_name);
-            var pairedListView = FindViewById<ListView>(Resource.Id.paired_devices);
 
-            pairedListView.Adapter = PairedDevicesArrayAdapter;
-            var newDevicesListView = FindViewById<ListView>(Resource.Id.new_devices);
-            newDevicesListView.Adapter = NewDevicesArrayAdapter;
+            _findButton = FindViewById<Button>(Resource.Id.button_scan);
+
+            PairedDevicesArrayAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1);
+            NewDevicesArrayAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1);
+
+            _pairedListView = FindViewById<ListView>(Resource.Id.paired_devices);
+            _pairedListView.Adapter = PairedDevicesArrayAdapter;
+            _newDevicesListView = FindViewById<ListView>(Resource.Id.new_devices);
+            _newDevicesListView.Adapter = NewDevicesArrayAdapter;
 
             _receiver = new Receiver(this);
             var filter = new IntentFilter(BluetoothDevice.ActionFound);
@@ -75,14 +83,17 @@ namespace OBDProject.Activities
                 PairedDevicesArrayAdapter.Add(noDevices);
             }
 
-            newDevicesListView.ItemClick += NewDevices_ItemClick;
-            pairedListView.ItemClick += NewDevices_ItemClick;
+            _newDevicesListView.ItemClick += NewDevices_ItemClick;
+            _pairedListView.ItemClick += NewDevices_ItemClick;
             _findButton.Click += _findButton_Click;
 
         }
 
+
+
         private void NewDevices_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
+
             Intent intent = new Intent();
 
             var address = string.Empty;
@@ -95,16 +106,11 @@ namespace OBDProject.Activities
             var info = (e.View as TextView).Text.ToString();
             address = info.Substring(info.Length - 17);
 
-            //byte[] cmd = Encoding.ASCII.GetBytes("01 0D");
-            //_socket.OutputStream.Write(cmd, 0, cmd.Length);
-            //ReadAnswer();
-            //_socket.OutputStream.Flush();
+            var singleOrDefault = _bluetoothAdapter.BondedDevices.SingleOrDefault(x => x.Address.Contains(address));
+            if (singleOrDefault != null)
+                DeviceName = singleOrDefault.Name;
 
-            //   intent.PutExtra(ConnectedStatus, _socket.IsConnected );
-
-            // Set result and finish this Activity
-
-            //eTxt[i].Text = slnArray[i].ToString();
+            intent.PutExtra(ActivityResults.DeviceName, DeviceName);
             intent.PutExtra(ActivityResults.ActivityClosed, ActivityReturned);
             intent.PutExtra(ActivityResults.AddressOfSelectedDevice, address);
             SetResult(Result.Ok, intent);

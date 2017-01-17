@@ -1,8 +1,8 @@
 using Android.Bluetooth;
+using OBDProject.Utils;
 using System;
 using System.Linq;
 using System.Text;
-using OBDProject.Utils;
 
 namespace OBDProject.Commands.Temperature
 {
@@ -15,12 +15,14 @@ namespace OBDProject.Commands.Temperature
 
         protected override void PrepereFindResult()
         {
+            string value = NoData;
+
             if (base.ReadedData.Any())
             {
-                var value = base.ReadedData[2] - 40;
-
-                OnResponse(string.Format("{0}{1}{2} {3}", Source, Environment.NewLine, value, base.Unit));
+                value = (base.ReadedData[2] - 40).ToString();
             }
+
+            OnResponse(string.Format("{0}{1}{2} {3}", Source, Environment.NewLine, value, base.Unit));
         }
     }
 }

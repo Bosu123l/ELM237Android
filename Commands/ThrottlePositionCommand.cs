@@ -1,8 +1,8 @@
-using System;
 using Android.Bluetooth;
+using OBDProject.Utils;
+using System;
 using System.Linq;
 using System.Text;
-using OBDProject.Utils;
 
 namespace OBDProject.Commands
 {
@@ -17,11 +17,13 @@ namespace OBDProject.Commands
 
         protected override void PrepereFindResult()
         {
+            string value = NoData;
             if (base.ReadedData.Any())
             {
-                var value = (100f * base.ReadedData[2]) / 255f;
-                OnResponse(string.Format("{0}{1}{2} {3}", Source, Environment.NewLine, value, base.Unit));
+                value = ((100f * base.ReadedData[2]) / 255f).ToString();
             }
+
+            OnResponse(string.Format("{0}{1}{2} {3}", Source, Environment.NewLine, value, base.Unit));
         }
     }
 }

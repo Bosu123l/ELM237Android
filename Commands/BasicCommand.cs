@@ -11,6 +11,8 @@ namespace OBDProject.Commands
 {
     public abstract class BasicCommand
     {
+        public const string NoData = "data not available";
+
         public object ReadFromDeviceLock;
 
         public string ReadyData
@@ -37,16 +39,17 @@ namespace OBDProject.Commands
         {
             get; protected set;
         }
-        protected readonly BluetoothSocket _socket;
-        protected readonly byte[] _command;
+
+        protected readonly BluetoothSocket Socket;
+        protected readonly byte[] Command;
         protected LogManager LogManager;
 
         public event EventHandler<string> Response;
 
         protected BasicCommand(byte[] command, BluetoothSocket socket, object readFromDeviceLock, LogManager logManager) : this(command, socket, string.Empty, readFromDeviceLock, 0, logManager)
         {
-
         }
+
         protected BasicCommand(byte[] command, BluetoothSocket socket, string unit, object readFromDeviceLock, int position, LogManager logManager)
         {
             if (logManager == null)
@@ -60,11 +63,11 @@ namespace OBDProject.Commands
             }
             if (socket == null)
             {
-                throw new ArgumentNullException("Socket Cannot be null!");
+                //throw new ArgumentNullException("Socket Cannot be null!");
             }
 
-            _command = command;
-            _socket = socket;
+            Command = command;
+            Socket = socket;
             ReadyData = string.Empty;
             ReadFromDeviceLock = readFromDeviceLock;
             Unit = unit;
@@ -84,7 +87,7 @@ namespace OBDProject.Commands
         {
             try
             {
-                _socket.OutputStream.Write(_command, 0, _command.Length);
+                Socket.OutputStream.Write(Command, 0, Command.Length);
             }
             catch (Exception e)
             {
@@ -92,7 +95,7 @@ namespace OBDProject.Commands
             }
             finally
             {
-                _socket.OutputStream.Flush();
+                Socket.OutputStream.Flush();
             }
         }
 
@@ -124,7 +127,7 @@ namespace OBDProject.Commands
             int a = 0;
             try
             {
-                while ((a = (byte)_socket.InputStream.ReadByte()) > -1)
+                while ((a = (byte)Socket.InputStream.ReadByte()) > -1)
                 {
                     c = (char)a;
 
@@ -144,7 +147,7 @@ namespace OBDProject.Commands
             }
             finally
             {
-                _socket.InputStream.Flush();
+                Socket.InputStream.Flush();
             }
             var clearedData = ClearResponseByRegex(builder.ToString(), SearchingPattern);
             clearedData = ClearResponseByRegex(clearedData, WhitespacePattern);
