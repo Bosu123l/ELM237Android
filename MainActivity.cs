@@ -255,7 +255,8 @@ namespace OBDProject
                 case Resource.Id.TroubleCodes:
                     if (_timer.Enabled)
                     {
-                        _timer.Start();
+                        _timer.Stop();
+                        //  ClearCommandCollection();
                     }
                     var troubleCodesIntent = new Intent(this, typeof(TroubleCodesActivity));
                     StartActivityForResult(troubleCodesIntent, 1);
@@ -332,24 +333,16 @@ namespace OBDProject
                 {
                     case DeviceListActivity.ActivityReturned:
                         {
-                            if (_indexesOfSelectedElements == null)
-                            {
-                                ShowAlert("Elements to display is not selected!");
-                                return;
-                            }
+                          
                             _address = data.Extras.GetString(ActivityResults.AddressOfSelectedDevice);
                             _bluetoothManager.Connect(_address);
 
                             ShowNotifaction(string.Format("Connected with {0}", data.Extras.GetString(ActivityResults.DeviceName)), Resource.Drawable.Connection);
-
-                            ClearCommandCollection();
-                            AddSelectedElements();
-
-                            foreach (var basicCommand in _basicCommands)
+                            if (_indexesOfSelectedElements != null)
                             {
-                                basicCommand.Response += _command_Response;
-                                _sourceNames.Add(basicCommand.Source);
+                                FillCommandResponse();
                             }
+                
 
                             break;
                         }
@@ -357,12 +350,25 @@ namespace OBDProject
                         {
                             var selectedElements = data.GetIntArrayExtra(ActivityResults.SelectedData);
                             _indexesOfSelectedElements = selectedElements.ToList();
+                            FillCommandResponse();
                         }
                         break;
                 }
             }
 
             base.OnActivityResult(requestCode, resultCode, data);
+        }
+
+        private void FillCommandResponse()
+        {
+            ClearCommandCollection();
+            AddSelectedElements();
+
+            foreach (var basicCommand in _basicCommands)
+            {
+                basicCommand.Response += _command_Response;
+                _sourceNames.Add(basicCommand.Source);
+            }
         }
 
         private void AddSelectedElements()

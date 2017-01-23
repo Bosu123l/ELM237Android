@@ -511,6 +511,9 @@ namespace OBDProject
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f080013
+			public const int BackTroubleCode = 2131230739;
+			
 			// aapt resource value: 0x7f080009
 			public const int ConfirmButton = 2131230729;
 			
@@ -549,6 +552,9 @@ namespace OBDProject
 			
 			// aapt resource value: 0x7f080007
 			public const int refreshButton = 2131230727;
+			
+			// aapt resource value: 0x7f080012
+			public const int refreshTroubleCode = 2131230738;
 			
 			// aapt resource value: 0x7f08000a
 			public const int rowTextView = 2131230730;
@@ -615,6 +621,9 @@ namespace OBDProject
 			// aapt resource value: 0x7f070000
 			public const int option_menu = 2131165184;
 			
+			// aapt resource value: 0x7f070001
+			public const int option_menu_trouble_Activity = 2131165185;
+			
 			static Menu()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -630,6 +639,9 @@ namespace OBDProject
 			
 			// aapt resource value: 0x7f050001
 			public const int ApplicationName = 2131034113;
+			
+			// aapt resource value: 0x7f050016
+			public const int BackTroubleCode = 2131034134;
 			
 			// aapt resource value: 0x7f050000
 			public const int Hello = 2131034112;
@@ -666,6 +678,9 @@ namespace OBDProject
 			
 			// aapt resource value: 0x7f050004
 			public const int not_connected = 2131034116;
+			
+			// aapt resource value: 0x7f050015
+			public const int refreshTroubleCode = 2131034133;
 			
 			// aapt resource value: 0x7f050009
 			public const int scanning = 2131034121;

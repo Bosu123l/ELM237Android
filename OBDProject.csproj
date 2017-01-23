@@ -60,7 +60,10 @@
     <Compile Include="Bootstrap.cs" />
     <Compile Include="Commands\BasicCommand.cs" />
     <Compile Include="Commands\CarStatus\ClearTroubleCodesCommand.cs" />
+    <Compile Include="Commands\CarStatus\PendingDiagnosticTroubleCodesCommand.cs" />
+    <Compile Include="Commands\CarStatus\PermanentDiagnosticTroubleCodesCommand.cs" />
     <Compile Include="Commands\CarStatus\TroubleCodesCommand.cs" />
+    <Compile Include="Commands\CarStatus\TroubleCodesCommandBasic.cs" />
     <Compile Include="Commands\Fuel\ConsuptionFuelRateCommand.cs" />
     <Compile Include="Commands\Fuel\FuelPressureCommand.cs" />
     <Compile Include="Commands\Temperature\EngineCoolantTemperatureCommand.cs" />
@@ -138,6 +141,9 @@
     <AndroidResource Include="Resources\drawable\Connection.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\menu\option_menu_trouble_Activity.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

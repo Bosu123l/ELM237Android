@@ -162,6 +162,7 @@ public final class R {
         public static final int noconnection=0x7f020003;
     }
     public static final class id {
+        public static final int BackTroubleCode=0x7f080013;
         public static final int ConfirmButton=0x7f080009;
         public static final int ElementyODB=0x7f080006;
         public static final int RemoveFaultsButton=0x7f08000c;
@@ -175,6 +176,7 @@ public final class R {
         public static final int new_devices=0x7f080003;
         public static final int paired_devices=0x7f080001;
         public static final int refreshButton=0x7f080007;
+        public static final int refreshTroubleCode=0x7f080012;
         public static final int rowTextView=0x7f08000a;
         public static final int scan=0x7f08000d;
         public static final int selectCommand=0x7f08000e;
@@ -192,9 +194,11 @@ public final class R {
     }
     public static final class menu {
         public static final int option_menu=0x7f070000;
+        public static final int option_menu_trouble_activity=0x7f070001;
     }
     public static final class string {
         public static final int ApplicationName=0x7f050001;
+        public static final int BackTroubleCode=0x7f050016;
         public static final int Hello=0x7f050000;
         public static final int TroubleCodes=0x7f050013;
         public static final int app_name=0x7f050002;
@@ -209,6 +213,9 @@ public final class R {
         public static final int none_found=0x7f05000c;
         public static final int none_paired=0x7f05000b;
         public static final int not_connected=0x7f050004;
+        /** Option Menu Trouble Code Activity
+         */
+        public static final int refreshTroubleCode=0x7f050015;
         /**   DeviceListActivity 
          */
         public static final int scanning=0x7f050009;

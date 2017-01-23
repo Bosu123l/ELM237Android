@@ -2,7 +2,7 @@
 <xs:schema xmlns:android="http://schemas.android.com/apk/res/android" attributeFormDefault="qualified" elementFormDefault="unqualified" targetNamespace="http://schemas.android.com/apk/res/android" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v23</xs:documentation>
-    <xs:documentation>17.01.2017 20:08:20</xs:documentation>
+    <xs:documentation>2017-01-23 10:46:57</xs:documentation>
   </xs:annotation>
   <xs:attribute name="accessibilityLiveRegion">
     <xs:annotation>
@@ -5055,6 +5055,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/BackTroubleCode" />
             <xs:enumeration value="@string/bt_not_enabled_leaving" />
             <xs:enumeration value="@string/button_scan" />
             <xs:enumeration value="@string/closeApplication" />
@@ -5065,6 +5066,7 @@
             <xs:enumeration value="@string/none_found" />
             <xs:enumeration value="@string/none_paired" />
             <xs:enumeration value="@string/not_connected" />
+            <xs:enumeration value="@string/refreshTroubleCode" />
             <xs:enumeration value="@string/scanning" />
             <xs:enumeration value="@string/select_device" />
             <xs:enumeration value="@string/send" />
@@ -5115,6 +5117,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/BackTroubleCode" />
             <xs:enumeration value="@string/bt_not_enabled_leaving" />
             <xs:enumeration value="@string/button_scan" />
             <xs:enumeration value="@string/closeApplication" />
@@ -5125,6 +5128,7 @@
             <xs:enumeration value="@string/none_found" />
             <xs:enumeration value="@string/none_paired" />
             <xs:enumeration value="@string/not_connected" />
+            <xs:enumeration value="@string/refreshTroubleCode" />
             <xs:enumeration value="@string/scanning" />
             <xs:enumeration value="@string/select_device" />
             <xs:enumeration value="@string/send" />
@@ -5747,6 +5751,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/BackTroubleCode" />
             <xs:enumeration value="@string/bt_not_enabled_leaving" />
             <xs:enumeration value="@string/button_scan" />
             <xs:enumeration value="@string/closeApplication" />
@@ -5757,6 +5762,7 @@
             <xs:enumeration value="@string/none_found" />
             <xs:enumeration value="@string/none_paired" />
             <xs:enumeration value="@string/not_connected" />
+            <xs:enumeration value="@string/refreshTroubleCode" />
             <xs:enumeration value="@string/scanning" />
             <xs:enumeration value="@string/select_device" />
             <xs:enumeration value="@string/send" />
@@ -6299,6 +6305,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/BackTroubleCode" />
             <xs:enumeration value="@string/bt_not_enabled_leaving" />
             <xs:enumeration value="@string/button_scan" />
             <xs:enumeration value="@string/closeApplication" />
@@ -6309,6 +6316,7 @@
             <xs:enumeration value="@string/none_found" />
             <xs:enumeration value="@string/none_paired" />
             <xs:enumeration value="@string/not_connected" />
+            <xs:enumeration value="@string/refreshTroubleCode" />
             <xs:enumeration value="@string/scanning" />
             <xs:enumeration value="@string/select_device" />
             <xs:enumeration value="@string/send" />
@@ -7830,6 +7838,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/BackTroubleCode" />
             <xs:enumeration value="@string/bt_not_enabled_leaving" />
             <xs:enumeration value="@string/button_scan" />
             <xs:enumeration value="@string/closeApplication" />
@@ -7840,6 +7849,7 @@
             <xs:enumeration value="@string/none_found" />
             <xs:enumeration value="@string/none_paired" />
             <xs:enumeration value="@string/not_connected" />
+            <xs:enumeration value="@string/refreshTroubleCode" />
             <xs:enumeration value="@string/scanning" />
             <xs:enumeration value="@string/select_device" />
             <xs:enumeration value="@string/send" />
@@ -8143,6 +8153,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/BackTroubleCode" />
             <xs:enumeration value="@string/bt_not_enabled_leaving" />
             <xs:enumeration value="@string/button_scan" />
             <xs:enumeration value="@string/closeApplication" />
@@ -8153,6 +8164,7 @@
             <xs:enumeration value="@string/none_found" />
             <xs:enumeration value="@string/none_paired" />
             <xs:enumeration value="@string/not_connected" />
+            <xs:enumeration value="@string/refreshTroubleCode" />
             <xs:enumeration value="@string/scanning" />
             <xs:enumeration value="@string/select_device" />
             <xs:enumeration value="@string/send" />
@@ -14186,6 +14198,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/BackTroubleCode" />
             <xs:enumeration value="@string/bt_not_enabled_leaving" />
             <xs:enumeration value="@string/button_scan" />
             <xs:enumeration value="@string/closeApplication" />
@@ -14196,6 +14209,7 @@
             <xs:enumeration value="@string/none_found" />
             <xs:enumeration value="@string/none_paired" />
             <xs:enumeration value="@string/not_connected" />
+            <xs:enumeration value="@string/refreshTroubleCode" />
             <xs:enumeration value="@string/scanning" />
             <xs:enumeration value="@string/select_device" />
             <xs:enumeration value="@string/send" />
@@ -14246,6 +14260,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/BackTroubleCode" />
             <xs:enumeration value="@string/bt_not_enabled_leaving" />
             <xs:enumeration value="@string/button_scan" />
             <xs:enumeration value="@string/closeApplication" />
@@ -14256,6 +14271,7 @@
             <xs:enumeration value="@string/none_found" />
             <xs:enumeration value="@string/none_paired" />
             <xs:enumeration value="@string/not_connected" />
+            <xs:enumeration value="@string/refreshTroubleCode" />
             <xs:enumeration value="@string/scanning" />
             <xs:enumeration value="@string/select_device" />
             <xs:enumeration value="@string/send" />
@@ -15122,6 +15138,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/BackTroubleCode" />
             <xs:enumeration value="@string/bt_not_enabled_leaving" />
             <xs:enumeration value="@string/button_scan" />
             <xs:enumeration value="@string/closeApplication" />
@@ -15132,6 +15149,7 @@
             <xs:enumeration value="@string/none_found" />
             <xs:enumeration value="@string/none_paired" />
             <xs:enumeration value="@string/not_connected" />
+            <xs:enumeration value="@string/refreshTroubleCode" />
             <xs:enumeration value="@string/scanning" />
             <xs:enumeration value="@string/select_device" />
             <xs:enumeration value="@string/send" />
@@ -15182,6 +15200,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/BackTroubleCode" />
             <xs:enumeration value="@string/bt_not_enabled_leaving" />
             <xs:enumeration value="@string/button_scan" />
             <xs:enumeration value="@string/closeApplication" />
@@ -15192,6 +15211,7 @@
             <xs:enumeration value="@string/none_found" />
             <xs:enumeration value="@string/none_paired" />
             <xs:enumeration value="@string/not_connected" />
+            <xs:enumeration value="@string/refreshTroubleCode" />
             <xs:enumeration value="@string/scanning" />
             <xs:enumeration value="@string/select_device" />
             <xs:enumeration value="@string/send" />
@@ -15242,6 +15262,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/BackTroubleCode" />
             <xs:enumeration value="@string/bt_not_enabled_leaving" />
             <xs:enumeration value="@string/button_scan" />
             <xs:enumeration value="@string/closeApplication" />
@@ -15252,6 +15273,7 @@
             <xs:enumeration value="@string/none_found" />
             <xs:enumeration value="@string/none_paired" />
             <xs:enumeration value="@string/not_connected" />
+            <xs:enumeration value="@string/refreshTroubleCode" />
             <xs:enumeration value="@string/scanning" />
             <xs:enumeration value="@string/select_device" />
             <xs:enumeration value="@string/send" />
@@ -20784,6 +20806,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/BackTroubleCode" />
             <xs:enumeration value="@string/bt_not_enabled_leaving" />
             <xs:enumeration value="@string/button_scan" />
             <xs:enumeration value="@string/closeApplication" />
@@ -20794,6 +20817,7 @@
             <xs:enumeration value="@string/none_found" />
             <xs:enumeration value="@string/none_paired" />
             <xs:enumeration value="@string/not_connected" />
+            <xs:enumeration value="@string/refreshTroubleCode" />
             <xs:enumeration value="@string/scanning" />
             <xs:enumeration value="@string/select_device" />
             <xs:enumeration value="@string/send" />
@@ -20940,6 +20964,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@+id/" />
             <xs:enumeration value="@+id/checkBox1" />
+            <xs:enumeration value="@id/BackTroubleCode" />
             <xs:enumeration value="@id/button_scan" />
             <xs:enumeration value="@id/closeApplication" />
             <xs:enumeration value="@id/ConfirmButton" />
@@ -20949,6 +20974,7 @@
             <xs:enumeration value="@id/new_devices" />
             <xs:enumeration value="@id/paired_devices" />
             <xs:enumeration value="@id/refreshButton" />
+            <xs:enumeration value="@id/refreshTroubleCode" />
             <xs:enumeration value="@id/RemoveFaultsButton" />
             <xs:enumeration value="@id/rowTextView" />
             <xs:enumeration value="@id/scan" />
@@ -21289,6 +21315,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/BackTroubleCode" />
             <xs:enumeration value="@string/bt_not_enabled_leaving" />
             <xs:enumeration value="@string/button_scan" />
             <xs:enumeration value="@string/closeApplication" />
@@ -21299,6 +21326,7 @@
             <xs:enumeration value="@string/none_found" />
             <xs:enumeration value="@string/none_paired" />
             <xs:enumeration value="@string/not_connected" />
+            <xs:enumeration value="@string/refreshTroubleCode" />
             <xs:enumeration value="@string/scanning" />
             <xs:enumeration value="@string/select_device" />
             <xs:enumeration value="@string/send" />
@@ -22677,6 +22705,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/BackTroubleCode" />
             <xs:enumeration value="@string/bt_not_enabled_leaving" />
             <xs:enumeration value="@string/button_scan" />
             <xs:enumeration value="@string/closeApplication" />
@@ -22687,6 +22716,7 @@
             <xs:enumeration value="@string/none_found" />
             <xs:enumeration value="@string/none_paired" />
             <xs:enumeration value="@string/not_connected" />
+            <xs:enumeration value="@string/refreshTroubleCode" />
             <xs:enumeration value="@string/scanning" />
             <xs:enumeration value="@string/select_device" />
             <xs:enumeration value="@string/send" />
@@ -24365,18 +24395,6 @@
       </xs:union>
     </xs:simpleType>
   </xs:attribute>
-  <xs:attribute name="layout_weight">
-    <xs:annotation>
-      <xs:documentation></xs:documentation>
-    </xs:annotation>
-    <xs:simpleType>
-      <xs:union memberTypes="xs:string">
-        <xs:simpleType>
-          <xs:restriction base="xs:string" />
-        </xs:simpleType>
-      </xs:union>
-    </xs:simpleType>
-  </xs:attribute>
   <xs:attribute name="layout_width">
     <xs:annotation>
       <xs:documentation>Specifies the basic width of the view. This is a required attribute for any view inside of a containing layout manager. Its value may be a dimension (such as "12dip") for a constant width or one of the special constants.</xs:documentation>
@@ -25316,6 +25334,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/BackTroubleCode" />
             <xs:enumeration value="@string/bt_not_enabled_leaving" />
             <xs:enumeration value="@string/button_scan" />
             <xs:enumeration value="@string/closeApplication" />
@@ -25326,6 +25345,7 @@
             <xs:enumeration value="@string/none_found" />
             <xs:enumeration value="@string/none_paired" />
             <xs:enumeration value="@string/not_connected" />
+            <xs:enumeration value="@string/refreshTroubleCode" />
             <xs:enumeration value="@string/scanning" />
             <xs:enumeration value="@string/select_device" />
             <xs:enumeration value="@string/send" />
@@ -25533,6 +25553,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/BackTroubleCode" />
             <xs:enumeration value="@string/bt_not_enabled_leaving" />
             <xs:enumeration value="@string/button_scan" />
             <xs:enumeration value="@string/closeApplication" />
@@ -25543,6 +25564,7 @@
             <xs:enumeration value="@string/none_found" />
             <xs:enumeration value="@string/none_paired" />
             <xs:enumeration value="@string/not_connected" />
+            <xs:enumeration value="@string/refreshTroubleCode" />
             <xs:enumeration value="@string/scanning" />
             <xs:enumeration value="@string/select_device" />
             <xs:enumeration value="@string/send" />
@@ -25807,6 +25829,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/BackTroubleCode" />
             <xs:enumeration value="@string/bt_not_enabled_leaving" />
             <xs:enumeration value="@string/button_scan" />
             <xs:enumeration value="@string/closeApplication" />
@@ -25817,6 +25840,7 @@
             <xs:enumeration value="@string/none_found" />
             <xs:enumeration value="@string/none_paired" />
             <xs:enumeration value="@string/not_connected" />
+            <xs:enumeration value="@string/refreshTroubleCode" />
             <xs:enumeration value="@string/scanning" />
             <xs:enumeration value="@string/select_device" />
             <xs:enumeration value="@string/send" />
@@ -26525,6 +26549,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/BackTroubleCode" />
             <xs:enumeration value="@string/bt_not_enabled_leaving" />
             <xs:enumeration value="@string/button_scan" />
             <xs:enumeration value="@string/closeApplication" />
@@ -26535,6 +26560,7 @@
             <xs:enumeration value="@string/none_found" />
             <xs:enumeration value="@string/none_paired" />
             <xs:enumeration value="@string/not_connected" />
+            <xs:enumeration value="@string/refreshTroubleCode" />
             <xs:enumeration value="@string/scanning" />
             <xs:enumeration value="@string/select_device" />
             <xs:enumeration value="@string/send" />
@@ -29036,6 +29062,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/BackTroubleCode" />
             <xs:enumeration value="@string/bt_not_enabled_leaving" />
             <xs:enumeration value="@string/button_scan" />
             <xs:enumeration value="@string/closeApplication" />
@@ -29046,6 +29073,7 @@
             <xs:enumeration value="@string/none_found" />
             <xs:enumeration value="@string/none_paired" />
             <xs:enumeration value="@string/not_connected" />
+            <xs:enumeration value="@string/refreshTroubleCode" />
             <xs:enumeration value="@string/scanning" />
             <xs:enumeration value="@string/select_device" />
             <xs:enumeration value="@string/send" />
@@ -31421,6 +31449,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/BackTroubleCode" />
             <xs:enumeration value="@string/bt_not_enabled_leaving" />
             <xs:enumeration value="@string/button_scan" />
             <xs:enumeration value="@string/closeApplication" />
@@ -31431,6 +31460,7 @@
             <xs:enumeration value="@string/none_found" />
             <xs:enumeration value="@string/none_paired" />
             <xs:enumeration value="@string/not_connected" />
+            <xs:enumeration value="@string/refreshTroubleCode" />
             <xs:enumeration value="@string/scanning" />
             <xs:enumeration value="@string/select_device" />
             <xs:enumeration value="@string/send" />
@@ -32716,6 +32746,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/BackTroubleCode" />
             <xs:enumeration value="@string/bt_not_enabled_leaving" />
             <xs:enumeration value="@string/button_scan" />
             <xs:enumeration value="@string/closeApplication" />
@@ -32726,6 +32757,7 @@
             <xs:enumeration value="@string/none_found" />
             <xs:enumeration value="@string/none_paired" />
             <xs:enumeration value="@string/not_connected" />
+            <xs:enumeration value="@string/refreshTroubleCode" />
             <xs:enumeration value="@string/scanning" />
             <xs:enumeration value="@string/select_device" />
             <xs:enumeration value="@string/send" />
@@ -36732,6 +36764,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/BackTroubleCode" />
             <xs:enumeration value="@string/bt_not_enabled_leaving" />
             <xs:enumeration value="@string/button_scan" />
             <xs:enumeration value="@string/closeApplication" />
@@ -36742,6 +36775,7 @@
             <xs:enumeration value="@string/none_found" />
             <xs:enumeration value="@string/none_paired" />
             <xs:enumeration value="@string/not_connected" />
+            <xs:enumeration value="@string/refreshTroubleCode" />
             <xs:enumeration value="@string/scanning" />
             <xs:enumeration value="@string/select_device" />
             <xs:enumeration value="@string/send" />
@@ -38310,6 +38344,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/BackTroubleCode" />
             <xs:enumeration value="@string/bt_not_enabled_leaving" />
             <xs:enumeration value="@string/button_scan" />
             <xs:enumeration value="@string/closeApplication" />
@@ -38320,6 +38355,7 @@
             <xs:enumeration value="@string/none_found" />
             <xs:enumeration value="@string/none_paired" />
             <xs:enumeration value="@string/not_connected" />
+            <xs:enumeration value="@string/refreshTroubleCode" />
             <xs:enumeration value="@string/scanning" />
             <xs:enumeration value="@string/select_device" />
             <xs:enumeration value="@string/send" />
@@ -39507,6 +39543,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/BackTroubleCode" />
             <xs:enumeration value="@string/bt_not_enabled_leaving" />
             <xs:enumeration value="@string/button_scan" />
             <xs:enumeration value="@string/closeApplication" />
@@ -39517,6 +39554,7 @@
             <xs:enumeration value="@string/none_found" />
             <xs:enumeration value="@string/none_paired" />
             <xs:enumeration value="@string/not_connected" />
+            <xs:enumeration value="@string/refreshTroubleCode" />
             <xs:enumeration value="@string/scanning" />
             <xs:enumeration value="@string/select_device" />
             <xs:enumeration value="@string/send" />
@@ -41343,6 +41381,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/BackTroubleCode" />
             <xs:enumeration value="@string/bt_not_enabled_leaving" />
             <xs:enumeration value="@string/button_scan" />
             <xs:enumeration value="@string/closeApplication" />
@@ -41353,6 +41392,7 @@
             <xs:enumeration value="@string/none_found" />
             <xs:enumeration value="@string/none_paired" />
             <xs:enumeration value="@string/not_connected" />
+            <xs:enumeration value="@string/refreshTroubleCode" />
             <xs:enumeration value="@string/scanning" />
             <xs:enumeration value="@string/select_device" />
             <xs:enumeration value="@string/send" />
@@ -41403,6 +41443,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/BackTroubleCode" />
             <xs:enumeration value="@string/bt_not_enabled_leaving" />
             <xs:enumeration value="@string/button_scan" />
             <xs:enumeration value="@string/closeApplication" />
@@ -41413,6 +41454,7 @@
             <xs:enumeration value="@string/none_found" />
             <xs:enumeration value="@string/none_paired" />
             <xs:enumeration value="@string/not_connected" />
+            <xs:enumeration value="@string/refreshTroubleCode" />
             <xs:enumeration value="@string/scanning" />
             <xs:enumeration value="@string/select_device" />
             <xs:enumeration value="@string/send" />
@@ -45125,6 +45167,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/BackTroubleCode" />
             <xs:enumeration value="@string/bt_not_enabled_leaving" />
             <xs:enumeration value="@string/button_scan" />
             <xs:enumeration value="@string/closeApplication" />
@@ -45135,6 +45178,7 @@
             <xs:enumeration value="@string/none_found" />
             <xs:enumeration value="@string/none_paired" />
             <xs:enumeration value="@string/not_connected" />
+            <xs:enumeration value="@string/refreshTroubleCode" />
             <xs:enumeration value="@string/scanning" />
             <xs:enumeration value="@string/select_device" />
             <xs:enumeration value="@string/send" />
@@ -45185,6 +45229,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/BackTroubleCode" />
             <xs:enumeration value="@string/bt_not_enabled_leaving" />
             <xs:enumeration value="@string/button_scan" />
             <xs:enumeration value="@string/closeApplication" />
@@ -45195,6 +45240,7 @@
             <xs:enumeration value="@string/none_found" />
             <xs:enumeration value="@string/none_paired" />
             <xs:enumeration value="@string/not_connected" />
+            <xs:enumeration value="@string/refreshTroubleCode" />
             <xs:enumeration value="@string/scanning" />
             <xs:enumeration value="@string/select_device" />
             <xs:enumeration value="@string/send" />
@@ -47492,6 +47538,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/BackTroubleCode" />
             <xs:enumeration value="@string/bt_not_enabled_leaving" />
             <xs:enumeration value="@string/button_scan" />
             <xs:enumeration value="@string/closeApplication" />
@@ -47502,6 +47549,7 @@
             <xs:enumeration value="@string/none_found" />
             <xs:enumeration value="@string/none_paired" />
             <xs:enumeration value="@string/not_connected" />
+            <xs:enumeration value="@string/refreshTroubleCode" />
             <xs:enumeration value="@string/scanning" />
             <xs:enumeration value="@string/select_device" />
             <xs:enumeration value="@string/send" />
@@ -47798,6 +47846,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/BackTroubleCode" />
             <xs:enumeration value="@string/bt_not_enabled_leaving" />
             <xs:enumeration value="@string/button_scan" />
             <xs:enumeration value="@string/closeApplication" />
@@ -47808,6 +47857,7 @@
             <xs:enumeration value="@string/none_found" />
             <xs:enumeration value="@string/none_paired" />
             <xs:enumeration value="@string/not_connected" />
+            <xs:enumeration value="@string/refreshTroubleCode" />
             <xs:enumeration value="@string/scanning" />
             <xs:enumeration value="@string/select_device" />
             <xs:enumeration value="@string/send" />
@@ -49235,6 +49285,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/app_name" />
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/BackTroubleCode" />
             <xs:enumeration value="@string/bt_not_enabled_leaving" />
             <xs:enumeration value="@string/button_scan" />
             <xs:enumeration value="@string/closeApplication" />
@@ -49245,6 +49296,7 @@
             <xs:enumeration value="@string/none_found" />
             <xs:enumeration value="@string/none_paired" />
             <xs:enumeration value="@string/not_connected" />
+            <xs:enumeration value="@string/refreshTroubleCode" />
             <xs:enumeration value="@string/scanning" />
             <xs:enumeration value="@string/select_device" />
             <xs:enumeration value="@string/send" />

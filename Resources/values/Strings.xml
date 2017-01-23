@@ -28,4 +28,9 @@
   <string name="discoverable">Make discoverable</string>
   <string name="TroubleCodes">Trouble Codes</string>
   <string name="closeApplication">Exit</string>
+
+  <!--Option Menu Trouble Code Activity-->
+  <string name="refreshTroubleCode">Refresh Trouble Codes</string>
+  <string name="BackTroubleCode">Back</string>
+  
 </resources>

@@ -203,7 +203,8 @@ namespace OBDProject.Commands
             }
             catch (Exception ex)
             {
-                throw new Exception(string.Format("Error while fillBuffer: {0}", ex.Message));
+                OnResponse(string.Format("{0}{1}{2} {3}", Source, Environment.NewLine, NoData, Unit));
+
             }
             LogManager.InfoWriteLine(string.Format("{0}{1}", "++++++LIST OF NUMBERS IN MESSAGE++++++", string.Join(",", buffer.Select(x => x.ToString()))));
 
