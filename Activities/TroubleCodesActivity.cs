@@ -57,6 +57,8 @@ namespace OBDProject.Activities
 
             _semaphoreSlim = new SemaphoreSlim(1);
 
+            _progress = new ProgressDialog(this);
+
             _clearTroubleCodesCommand = new ClearTroubleCodesCommand(_bluetoothManager.Socket, _readFromDeviceLock,
                 _logManager);
             _troubleCodesCommand = new TroubleCodesCommand(_bluetoothManager.Socket, _semaphoreSlim, _logManager);
@@ -85,6 +87,7 @@ namespace OBDProject.Activities
 
         private async void _clearButton_Click(object sender, EventArgs e)
         {
+
             try
             {
                 _clearTroubleCodesCommand.ClearCodes();
@@ -120,6 +123,7 @@ namespace OBDProject.Activities
             {
                 case Resource.Id.refreshTroubleCode:
                     {
+                        _troubleCodes.Clear();
                         Task.Run(async () =>
                         {
                             await _troubleCodesCommand.ReadResult();
@@ -143,24 +147,50 @@ namespace OBDProject.Activities
 
         private void _troubleCodesCommand_Response(object sender, string e)
         {
-            _progress.Cancel();
-
-            _troubleCodes = new List<string>(e.Split(new[] { System.Environment.NewLine }, StringSplitOptions.None));
-
-            if (_progress != null)
+            if (string.IsNullOrEmpty(e))
             {
-                _progress.Hide();
-                _progress.Dispose();
+                return;
             }
-
-            try
+            RunOnUiThread(() =>
             {
+                var tempErrorCodes = e;
+                try
+                {
+                    _progress.Cancel();
+                 
+                }
+                catch (Exception ex)
+                {
+                    ;
+                }
+
+                _troubleCodes.AddRange(new List<string>(tempErrorCodes.Split(new[] { System.Environment.NewLine }, StringSplitOptions.None)));
+                for (int i = 0; i < _troubleCodes.Count; i++)
+                {
+                    if (string.IsNullOrEmpty(_troubleCodes[i]))
+                    {
+                        _troubleCodes.RemoveAt(i);
+                    }
+                }
                 UpdateList();
-            }
-            catch (Exception exception)
-            {
-                int i = 0;
-            }
+
+                if (_progress != null)
+                {
+                    try
+                    {
+                        _progress.Hide();
+                        _progress.Dispose();
+                    }
+                    catch (Exception exception)
+                    {
+                        ;
+                    }
+                   
+                }
+
+               
+            });
+           
         }
 
         private void ShowProgressBar(string dialogMessage, string toastMessage)

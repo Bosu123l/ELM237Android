@@ -2,6 +2,7 @@ using Android.Bluetooth;
 using Android.Util;
 using OBDProject.Utils;
 using System;
+using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
@@ -89,6 +90,7 @@ namespace OBDProject.Commands.CarStatus
         protected override void PrepereFindResult()
         {
             string builder = string.Empty;
+            string troubleCode = string.Empty;
             string result = _rawData;
 
             string workingData;
@@ -128,15 +130,18 @@ namespace OBDProject.Commands.CarStatus
                         return;
                     }
                     builder += string.Format("{0}{1}", temp, System.Environment.NewLine);
+                    troubleCode += builder.ToString();
                 }
             }
             catch (Exception e)
             {
+
                 LogManager.WarringWriteLine(e.Message);
+            
             }
             finally
             {
-                base.OnResponse(builder.ToString());
+                base.OnResponse(troubleCode);
             }
         }
 

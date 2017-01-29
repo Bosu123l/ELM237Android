@@ -180,7 +180,6 @@ D:\Source\ELM237Android\obj\Debug\android\assets\System.Runtime.Serialization.dl
 D:\Source\ELM237Android\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
 D:\Source\ELM237Android\obj\Debug\android\assets\System.Xml.dll.mdb
 D:\Source\ELM237Android\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
-D:\Source\ELM237Android\obj\Debug\OBDProject.dll.mdb
 C:\Users\lgawin\Desktop\ELM237Android\bin\Debug\OBDProject.dll
 C:\Users\lgawin\Desktop\ELM237Android\bin\Debug\OBDProject.pdb
 C:\Users\lgawin\Desktop\ELM237Android\bin\Debug\OBDProject.OBDProject.apk
@@ -232,4 +231,8 @@ C:\Users\lgawin\Desktop\ELM237Android\obj\Debug\android\assets\System.ServiceMod
 C:\Users\lgawin\Desktop\ELM237Android\obj\Debug\android\assets\System.Xml.dll.mdb
 C:\Users\lgawin\Desktop\ELM237Android\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
 C:\Users\lgawin\Desktop\ELM237Android\obj\Debug\OBDProject.dll.mdb
-C:\Users\lgawin\Desktop\ELM237Android\bin\Debug\OBDProject.dll.mdb
+D:\Source\ELM237Android\obj\Debug\res\drawable\noconnection.png
+D:\Source\ELM237Android\obj\Debug\res\drawable\connection.png
+D:\Source\ELM237Android\obj\Debug\res\menu\option_menu_trouble_activity.xml
+D:\Source\ELM237Android\obj\Debug\OBDProject.dll.mdb
+D:\Source\ELM237Android\bin\Debug\OBDProject.dll.mdb
